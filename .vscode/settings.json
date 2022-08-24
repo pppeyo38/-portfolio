@@ -3,6 +3,7 @@
   "prettier.singleAttributePerLine": false,
   "prettier.singleQuote": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   }
 }
