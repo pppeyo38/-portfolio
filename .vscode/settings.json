@@ -1,5 +1,8 @@
 {
   "prettier.semi": false,
   "prettier.singleAttributePerLine": false,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
