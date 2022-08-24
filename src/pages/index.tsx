@@ -1,6 +1,6 @@
+import { css } from '@emotion/react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { css } from '@emotion/react'
 
 const Home: NextPage = () => {
   return (
@@ -21,11 +21,11 @@ const Home: NextPage = () => {
 export default Home
 
 const main = css`
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
   display: flex;
+  min-height: 100vh;
+  flex: 1;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
 `
