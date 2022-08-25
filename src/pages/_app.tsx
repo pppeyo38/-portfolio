@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 import type { AppProps } from 'next/app'
-import { theme } from '../themes/theme'
+import { theme } from '@/themes/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
