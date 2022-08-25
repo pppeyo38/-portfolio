@@ -1,6 +1,7 @@
-import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+
+import { HomeLayout } from '@/components/layouts/HomeLayout'
 
 const Home: NextPage = () => {
   return (
@@ -12,14 +13,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <_H1>テスト</_H1>
+        <HomeLayout />
       </main>
     </div>
   )
 }
 
 export default Home
-
-const _H1 = styled.h1`
-  font-family: ${({ theme }) => theme.fonts.ZKGothic};
-`

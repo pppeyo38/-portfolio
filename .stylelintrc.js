@@ -14,5 +14,6 @@ module.exports = {
     'string-quotes': ['single'],
     'function-no-unknown': [null],
     'font-family-name-quotes': [null],
+    'value-keyword-case': [null],
   },
 }
