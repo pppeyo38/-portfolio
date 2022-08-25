@@ -12,5 +12,7 @@ module.exports = {
   ],
   rules: {
     'string-quotes': ['single'],
+    'function-no-unknown': [null],
+    'font-family-name-quotes': [null],
   },
 }

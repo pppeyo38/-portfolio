@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
@@ -11,8 +11,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main css={main}>
-        <h1>テスト</h1>
+      <main>
+        <_H1>テスト</_H1>
       </main>
     </div>
   )
@@ -20,12 +20,6 @@ const Home: NextPage = () => {
 
 export default Home
 
-const main = css`
-  display: flex;
-  min-height: 100vh;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 0;
+const _H1 = styled.h1`
+  font-family: ${({ theme }) => theme.fonts.ZKGothic};
 `
