@@ -15,5 +15,6 @@ module.exports = {
     'function-no-unknown': [null],
     'font-family-name-quotes': [null],
     'value-keyword-case': [null],
+    'rule-empty-line-before': [null],
   },
 }

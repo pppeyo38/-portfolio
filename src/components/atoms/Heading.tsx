@@ -12,7 +12,7 @@ export const Heading = ({ children }: Props) => {
 const _H1 = styled.h1`
   color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.fonts.BVP};
-  font-size: 32px;
+  font-size: 45px;
   font-style: italic;
   font-weight: ${({ theme }) => theme.fontWt.Thin};
   letter-spacing: 1.6px;

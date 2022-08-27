@@ -2,7 +2,7 @@ export const theme = {
   colors: {
     black: '#111012',
     gray: '#5D5C60',
-    lightGray: '#C3C2C4',
+    lightGray: '#E9E9F2',
     white: '#FAFAFC',
   },
   fonts: {

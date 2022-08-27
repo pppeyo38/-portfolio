@@ -9,6 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Global
         styles={css`
           ${emotionReset}
+          body {
+            background-color: #fafafc;
+          }
           li {
             list-style: none;
           }
