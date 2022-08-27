@@ -1,5 +1,11 @@
-import { HeroArea } from '../organisms/HeroArea'
+import { HeroArea } from '@/components/organisms/top/HeroArea'
+import { Work } from '@/components/organisms/top/Work'
 
 export const HomeLayout = () => {
-  return <HeroArea />
+  return (
+    <>
+      <HeroArea />
+      <Work />
+    </>
+  )
 }

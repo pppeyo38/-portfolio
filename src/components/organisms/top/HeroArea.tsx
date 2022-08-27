@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { use100vh } from 'react-div-100vh'
-import { Heading } from '../atoms/Heading'
+import { Heading } from '@/components/atoms/Heading'
 
 export const HeroArea = () => {
   const height = use100vh()
@@ -17,8 +17,8 @@ export const HeroArea = () => {
 
 const _Section = styled.section<{ height: string }>`
   display: grid;
-  place-content: center;
   height: ${(props) => props.height};
+  place-content: center;
 `
 const _TitleWrap = styled.div`
   height: fit-content;
