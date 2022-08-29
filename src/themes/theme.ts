@@ -11,6 +11,7 @@ export const theme = {
   },
   fontWt: {
     Thin: 100,
+    Light: 300,
     Regular: 400,
     Bold: 700,
   },

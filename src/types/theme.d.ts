@@ -22,6 +22,7 @@ interface Fonts {
 
 interface FontWt {
   Thin: number
+  Light: number
   Regular: number
   Bold: number
 }

@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import { use100vh } from 'react-div-100vh'
-import { Heading } from '@/components/atoms/Heading'
 
 export const HeroArea = () => {
   const height = use100vh()
@@ -8,7 +7,7 @@ export const HeroArea = () => {
   return (
     <_Section height={height ? `${height}px` : '100vh'}>
       <_TitleWrap>
-        <Heading>Peyo Log!</Heading>
+        <_Title>Peyo Log!</_Title>
         <_SubTitle>Isono Tamaki’s portfolio</_SubTitle>
       </_TitleWrap>
     </_Section>
@@ -27,11 +26,21 @@ const _TitleWrap = styled.div`
   }
 `
 
+const _Title = styled.h1`
+  color: ${({ theme }) => theme.colors.black};
+  font-family: ${({ theme }) => theme.fonts.BVP};
+  font-size: 66px;
+  font-style: italic;
+  font-weight: ${({ theme }) => theme.fontWt.Light};
+  letter-spacing: 1.6px;
+  line-height: 1.25;
+  text-align: center;
+`
+
 const _SubTitle = styled.h2`
   color: ${({ theme }) => theme.colors.gray};
   font-family: ${({ theme }) => theme.fonts.BVP};
   font-size: 20px;
-  font-style: italic;
   font-weight: ${({ theme }) => theme.fontWt.Thin};
   letter-spacing: 1.6px;
   line-height: 1.25;

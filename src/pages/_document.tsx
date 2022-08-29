@@ -13,6 +13,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
+          <meta name="description" content="ぺよのポートフォリオサイト" />
+          <link rel="icon" href="/favicon.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
@@ -20,7 +22,7 @@ export default class MyDocument extends Document {
             crossOrigin=""
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;1,100&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;1,100;1,300&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
             rel="stylesheet"
           />
         </Head>
