@@ -1,8 +1,8 @@
-import { Heading } from '@/components/atoms/Heading'
 import styled from '@emotion/styled'
 import Image from 'next/image'
 import { use100vh } from 'react-div-100vh'
 
+import { Heading } from '@/components/atoms/Heading'
 import profile from '/public/profile.png'
 
 export const AboutMe = () => {

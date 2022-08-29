@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import { use100vh } from 'react-div-100vh'
 
+import { AboutMe } from '@/components/organisms/top/AboutMe'
 import { HeroArea } from '@/components/organisms/top/HeroArea'
 import { Work } from '@/components/organisms/top/Work'
-import { AboutMe } from '../organisms/top/AboutMe'
 
 export const HomeLayout = () => {
   const height = use100vh()
