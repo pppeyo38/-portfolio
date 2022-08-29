@@ -10,21 +10,24 @@ export const Work = () => {
   const height = use100vh()
 
   return (
-    <_Section height={height ? `${height}px` : '100vh'}>
-      <WorksPagination />
-      <_WorkScroll>
-        <WorkImg imgPath={iromemoImg} title="16memo" />
-        <WorkImg imgPath={geikousaiImg} title="geikousai pre" />
-      </_WorkScroll>
+    <_Section>
+      <_FixedPagination height={height ? `${height}px` : '100vh'}>
+        <WorksPagination />
+      </_FixedPagination>
+      <WorkImg imgPath={iromemoImg} title="16memo" />
+      <WorkImg imgPath={geikousaiImg} title="geikousai pre" />
     </_Section>
   )
 }
 
-const _Section = styled.section<{ height: string }>`
+const _Section = styled.section`
   position: relative;
-  height: ${(props) => props.height};
 `
 
-const _WorkScroll = styled.div`
-  overflow-x: scroll;
+const _FixedPagination = styled.div<{ height: string }>`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: ${(props) => props.height};
 `

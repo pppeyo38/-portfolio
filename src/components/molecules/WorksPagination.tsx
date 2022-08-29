@@ -17,13 +17,12 @@ export const WorksPagination = () => {
 }
 
 const _Pagination = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 8%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 `
 
@@ -31,8 +30,8 @@ const _PageList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
   margin-top: 32px;
+  gap: 16px;
 `
 
 const _PageListItems = styled.li`
@@ -48,5 +47,5 @@ const _VerticalLine = styled.span`
   display: block;
   width: 0.7px;
   height: 44px;
-  background-color: rgba(93, 92, 96, 0.4);
+  background-color: rgba(93, 92, 96, 40%);
 `

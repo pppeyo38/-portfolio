@@ -16,5 +16,6 @@ module.exports = {
     'font-family-name-quotes': [null],
     'value-keyword-case': [null],
     'rule-empty-line-before': [null],
+    'color-function-notation': [null],
   },
 }

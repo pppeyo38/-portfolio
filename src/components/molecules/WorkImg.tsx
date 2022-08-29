@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
-import { use100vh } from 'react-div-100vh'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
+import { use100vh } from 'react-div-100vh'
 
 type Props = {
   imgPath: StaticImageData
@@ -23,11 +23,11 @@ export const WorkImg = ({ imgPath, title }: Props) => {
 }
 
 const _Wrapper = styled.div<{ height: string }>`
+  display: flex;
   width: 100vw;
   height: ${(props) => props.height};
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `
 
 const _ImgInner = styled.figure`
