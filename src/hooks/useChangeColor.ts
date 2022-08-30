@@ -8,7 +8,7 @@ type rgb = {
 
 const useChangeColor = (height: number) => {
   const [scrollY, setScrollY] = useState(0)
-  const [cololr, setColor] = useState<string>('#FAFAFC')
+  // const [cololr, setColor] = useState<string>('#FAFAFC')
   const [rgb, setRgb] = useState<rgb>({ red: 250, green: 250, blue: 252 })
 
   const handleScroll = () => {

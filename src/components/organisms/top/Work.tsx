@@ -1,12 +1,17 @@
 import styled from '@emotion/styled'
+import Image from 'next/image'
+import Link from 'next/link'
 import { use100vh } from 'react-div-100vh'
 
-import { WorkImg } from '@/components/molecules/WorkImg'
 import iromemoImg from '/public/work/16memo.jpg'
 import geikousaiImg from '/public/work/geikosaiPre.jpg'
 import { WorksPagination } from '@/components/molecules/WorksPagination'
 
-export const Work = () => {
+type Props = {
+  iromemoRef: (node?: Element | null | undefined) => void
+}
+
+export const Work = ({ iromemoRef }: Props) => {
   const height = use100vh()
 
   return (
@@ -14,8 +19,30 @@ export const Work = () => {
       <_FixedPagination height={height ? `${height}px` : '100vh'}>
         <WorksPagination />
       </_FixedPagination>
-      <WorkImg imgPath={iromemoImg} title="16memo" />
-      <WorkImg imgPath={geikousaiImg} title="geikousai pre" />
+      <Link href={'/'}>
+        <_Wrapper height={height ? `${height}px` : '100vh'} ref={iromemoRef}>
+          <_ImgInner>
+            <Image
+              src={iromemoImg}
+              alt="16memo"
+              layout="fill"
+              objectFit="cover"
+            />
+          </_ImgInner>
+        </_Wrapper>
+      </Link>
+      <Link href={'/'}>
+        <_Wrapper height={height ? `${height}px` : '100vh'}>
+          <_ImgInner>
+            <Image
+              src={geikousaiImg}
+              alt="geikousai pre"
+              layout="fill"
+              objectFit="cover"
+            />
+          </_ImgInner>
+        </_Wrapper>
+      </Link>
     </_Section>
   )
 }
@@ -30,4 +57,17 @@ const _FixedPagination = styled.div<{ height: string }>`
   left: 0;
   width: 100%;
   height: ${(props) => props.height};
+`
+const _Wrapper = styled.div<{ height: string }>`
+  display: flex;
+  width: 100vw;
+  height: ${(props) => props.height};
+  align-items: center;
+  justify-content: center;
+`
+
+const _ImgInner = styled.figure`
+  position: relative;
+  width: 53%;
+  aspect-ratio: 1.618 / 1;
 `
