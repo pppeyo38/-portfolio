@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import { Heading } from '@/components/atoms/Heading'
 
-export const WorksPagination = () => {
+export const WorksPagination = ({ height }: { height: string }) => {
   return (
-    <_Pagination>
+    <_Pagination height={height}>
       <Heading>Works</Heading>
       <_PageList>
         <_PageListItems>01</_PageListItems>
@@ -16,14 +16,12 @@ export const WorksPagination = () => {
   )
 }
 
-const _Pagination = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 8%;
+const _Pagination = styled.div<{ height: string }>`
   display: flex;
+  height: ${(props) => props.height};
   flex-direction: column;
   align-items: center;
-  transform: translate(0, -50%);
+  justify-content: center;
 `
 
 const _PageList = styled.ul`

@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import Image from 'next/image'
 import Link from 'next/link'
 import { use100vh } from 'react-div-100vh'
+import StickyBox from 'react-sticky-box'
 
 import iromemoImg from '/public/work/16memo.jpg'
 import geikousaiImg from '/public/work/geikosaiPre.jpg'
@@ -16,51 +17,51 @@ export const Work = ({ workRef }: Props) => {
 
   return (
     <_Section ref={workRef}>
-      <_FixedPagination height={height ? `${height}px` : '100vh'}>
-        <WorksPagination />
-      </_FixedPagination>
-      <Link href={'/'}>
-        <_Wrapper height={height ? `${height}px` : '100vh'}>
-          <_ImgInner>
-            <Image
-              src={iromemoImg}
-              alt="16memo"
-              layout="fill"
-              objectFit="cover"
-            />
-          </_ImgInner>
-        </_Wrapper>
-      </Link>
-      <Link href={'/'}>
-        <_Wrapper height={height ? `${height}px` : '100vh'}>
-          <_ImgInner>
-            <Image
-              src={geikousaiImg}
-              alt="geikousai pre"
-              layout="fill"
-              objectFit="cover"
-            />
-          </_ImgInner>
-        </_Wrapper>
-      </Link>
+      <StickyBox>
+        <WorksPagination height={height ? `${height}px` : '100vh'} />
+      </StickyBox>
+      <_ScrollArea height={height ? `${height * 2}px` : '100vh'}>
+        <Link href={'/'}>
+          <_Wrapper height={height ? `${height}px` : '100vh'}>
+            <_ImgInner>
+              <Image
+                src={iromemoImg}
+                alt="16memo"
+                layout="fill"
+                objectFit="cover"
+              />
+            </_ImgInner>
+          </_Wrapper>
+        </Link>
+        <Link href={'/'}>
+          <_Wrapper height={height ? `${height}px` : '100vh'}>
+            <_ImgInner>
+              <Image
+                src={geikousaiImg}
+                alt="geikousai pre"
+                layout="fill"
+                objectFit="cover"
+              />
+            </_ImgInner>
+          </_Wrapper>
+        </Link>
+      </_ScrollArea>
     </_Section>
   )
 }
 
 const _Section = styled.section`
-  position: relative;
+  display: flex;
+  align-items: flex-start;
 `
 
-const _FixedPagination = styled.div<{ height: string }>`
-  position: absolute;
-  top: 0;
-  left: 0;
+const _ScrollArea = styled.div<{ height: string }>`
   width: 100%;
   height: ${(props) => props.height};
 `
+
 const _Wrapper = styled.div<{ height: string }>`
   display: flex;
-  width: 100vw;
   height: ${(props) => props.height};
   align-items: center;
   justify-content: center;
