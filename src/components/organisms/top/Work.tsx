@@ -8,19 +8,19 @@ import geikousaiImg from '/public/work/geikosaiPre.jpg'
 import { WorksPagination } from '@/components/molecules/WorksPagination'
 
 type Props = {
-  iromemoRef: (node?: Element | null | undefined) => void
+  workRef: (node?: Element | null | undefined) => void
 }
 
-export const Work = ({ iromemoRef }: Props) => {
+export const Work = ({ workRef }: Props) => {
   const height = use100vh()
 
   return (
-    <_Section>
+    <_Section ref={workRef}>
       <_FixedPagination height={height ? `${height}px` : '100vh'}>
         <WorksPagination />
       </_FixedPagination>
       <Link href={'/'}>
-        <_Wrapper height={height ? `${height}px` : '100vh'} ref={iromemoRef}>
+        <_Wrapper height={height ? `${height}px` : '100vh'}>
           <_ImgInner>
             <Image
               src={iromemoImg}

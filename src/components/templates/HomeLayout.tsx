@@ -1,57 +1,51 @@
 import styled from '@emotion/styled'
+import { useState } from 'react'
 import { use100vh } from 'react-div-100vh'
 import { useInView } from 'react-intersection-observer'
 
 import { AboutMe } from '@/components/organisms/top/AboutMe'
 import { HeroArea } from '@/components/organisms/top/HeroArea'
 import { Work } from '@/components/organisms/top/Work'
-import { useState } from 'react'
 
 export const HomeLayout = () => {
-  const height = use100vh()
-  const [rgb, setRgb] = useState({ red: 250, green: 250, blue: 252 })
+  const [opacity, setOpacity] = useState<number>(0)
 
   const buildThresholdList = () => {
-    let thresholds = []
-    let numSteps = 20
+    const thresholds = []
+    const numSteps = 20
 
     for (let i = 1; i <= numSteps; i++) {
-      let ratio = i / numSteps
+      const ratio = i / numSteps
       thresholds.push(ratio)
     }
     return thresholds
   }
-
-  const [iromemoRef, inIromemoView, entry] = useInView({
+  const [workRef, inWorkView, entry] = useInView({
     rootMargin: '0px',
     triggerOnce: false,
     threshold: buildThresholdList(),
-    onChange: changeColor,
+    onChange: changeWorkBgColor,
   })
-
-  function changeColor() {
+  function changeWorkBgColor() {
     if (!entry) return
-    let ratio = Math.round(entry.intersectionRatio * 100) / 100
-    setRgb((prev) => ({
-      red: 250 - 43 * ratio,
-      green: 250 - 21 * ratio,
-      blue: 252 - 23 * ratio,
-    }))
-    console.log(inIromemoView)
+    const ratio = Math.round(entry.intersectionRatio * 100) / 100
+    setOpacity(ratio)
   }
 
   return (
-    <_FixedBg
-      height={height ? `${height}px` : '100vh'}
-      color={`rgb(${rgb['red']}, ${rgb['green']}, ${rgb['blue']})`}
-    >
+    <_FixedBg opacity={opacity}>
       <HeroArea />
-      <Work iromemoRef={iromemoRef} />
+      <Work workRef={workRef} />
       <AboutMe />
     </_FixedBg>
   )
 }
 
-const _FixedBg = styled.div<{ height: string; color: string }>`
-  background: ${(props) => props.color};
+const _FixedBg = styled.div<{ opacity: number }>`
+  background: linear-gradient(
+    rgba(250, 250, 252, ${(props) => props.opacity}) 0%,
+    rgba(202, 237, 237, ${(props) => props.opacity}) 38%,
+    rgba(212, 237, 206, ${(props) => props.opacity}) 62%,
+    rgba(250, 250, 252, ${(props) => props.opacity}) 100%
+  );
 `
