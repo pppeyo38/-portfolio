@@ -17,31 +17,21 @@ export const Work = ({ workRef }: Props) => {
 
   return (
     <_Section ref={workRef}>
-      <StickyBox>
+      <StickyBox style={{ width: '20%' }}>
         <WorksPagination height={height ? `${height}px` : '100vh'} />
       </StickyBox>
       <_ScrollArea height={height ? `${height * 2}px` : '100vh'}>
         <Link href={'/'}>
           <_Wrapper height={height ? `${height}px` : '100vh'}>
             <_ImgInner>
-              <Image
-                src={iromemoImg}
-                alt="16memo"
-                layout="fill"
-                objectFit="cover"
-              />
+              <img src={iromemoImg.src} alt="16memo" />
             </_ImgInner>
           </_Wrapper>
         </Link>
         <Link href={'/'}>
           <_Wrapper height={height ? `${height}px` : '100vh'}>
             <_ImgInner>
-              <Image
-                src={geikousaiImg}
-                alt="geikousai pre"
-                layout="fill"
-                objectFit="cover"
-              />
+              <img src={geikousaiImg.src} alt="geikousai pre" />
             </_ImgInner>
           </_Wrapper>
         </Link>
@@ -52,11 +42,12 @@ export const Work = ({ workRef }: Props) => {
 
 const _Section = styled.section`
   display: flex;
+  width: 100vw;
   align-items: flex-start;
 `
 
 const _ScrollArea = styled.div<{ height: string }>`
-  width: 100%;
+  width: 60%;
   height: ${(props) => props.height};
 `
 
@@ -68,7 +59,10 @@ const _Wrapper = styled.div<{ height: string }>`
 `
 
 const _ImgInner = styled.figure`
-  position: relative;
-  width: 53%;
-  aspect-ratio: 1.618 / 1;
+  width: 80%;
+  img {
+    aspect-ratio: 1.618 / 1;
+    width: 100%;
+    object-fit: cover;
+  }
 `

@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import { useState } from 'react'
-import { use100vh } from 'react-div-100vh'
 import { useInView } from 'react-intersection-observer'
 
 import { AboutMe } from '@/components/organisms/top/AboutMe'

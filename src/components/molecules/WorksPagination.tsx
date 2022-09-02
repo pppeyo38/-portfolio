@@ -18,10 +18,12 @@ export const WorksPagination = ({ height }: { height: string }) => {
 
 const _Pagination = styled.div<{ height: string }>`
   display: flex;
+  width: fit-content;
   height: ${(props) => props.height};
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 0 0 auto;
 `
 
 const _PageList = styled.ul`

@@ -13,5 +13,7 @@ module.exports = {
     'require-jsdoc': ['off'],
     'import/order': ['error', { alphabetize: { order: 'asc' } }],
     '@next/next/no-img-element': ['off'],
+    'no-unused-vars': ['off'],
+    'react/display-name': ['off'],
   },
 }
