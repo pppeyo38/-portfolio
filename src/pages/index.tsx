@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
+import { Header } from '@/components/organisms/Header'
 import { HomeLayout } from '@/components/templates/HomeLayout'
 
 const Home: NextPage = () => {
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
+        <Header />
         <HomeLayout />
       </main>
     </>

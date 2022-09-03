@@ -3,10 +3,10 @@ import { useState } from 'react'
 import { use100vh } from 'react-div-100vh'
 import { useInView } from 'react-intersection-observer'
 
-import useScroll from '@/hooks/useScroll'
 import { AboutMe } from '@/components/organisms/top/AboutMe'
 import { HeroArea } from '@/components/organisms/top/HeroArea'
 import { Work } from '@/components/organisms/top/Work'
+import useScroll from '@/hooks/useScroll'
 
 export const HomeLayout = () => {
   const [opacity, setOpacity] = useState<number>(0)
@@ -31,16 +31,12 @@ export const HomeLayout = () => {
   })
   function changeWorkBgColor() {
     if (!entry || !height) return
-    if (scrollY === 0 || scrollY === height * 5) {
-      setOpacity(0)
-      return
-    }
     const ratio = Math.round(entry.intersectionRatio * 100) / 100
     setOpacity(ratio)
   }
 
   return (
-    <_FixedBg opacity={opacity * 2}>
+    <_FixedBg opacity={opacity * 2} isEdge={scrollY === 0}>
       <HeroArea />
       <Work workRef={workRef} scrollY={scrollY} />
       <AboutMe />
@@ -48,7 +44,7 @@ export const HomeLayout = () => {
   )
 }
 
-const _FixedBg = styled.div<{ opacity: number }>`
+const _FixedBg = styled.div<{ opacity: number; isEdge: boolean }>`
   background: linear-gradient(
     rgba(250, 250, 252, ${(props) => props.opacity}) 0%,
     rgba(0, 153, 151, ${(props) => props.opacity}) 25%,
@@ -56,4 +52,5 @@ const _FixedBg = styled.div<{ opacity: number }>`
     rgba(0, 84, 153, ${(props) => props.opacity}) 58%,
     rgba(250, 250, 252, ${(props) => props.opacity}) 100%
   );
+  ${(props) => props.isEdge && `background: #FAFAFC;`}
 `
