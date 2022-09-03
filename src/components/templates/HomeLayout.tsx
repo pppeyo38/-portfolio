@@ -32,7 +32,7 @@ export const HomeLayout = () => {
   }
 
   return (
-    <_FixedBg opacity={opacity}>
+    <_FixedBg opacity={opacity * 2}>
       <HeroArea />
       <Work workRef={workRef} />
       <AboutMe />
@@ -43,8 +43,9 @@ export const HomeLayout = () => {
 const _FixedBg = styled.div<{ opacity: number }>`
   background: linear-gradient(
     rgba(250, 250, 252, ${(props) => props.opacity}) 0%,
-    rgba(202, 237, 237, ${(props) => props.opacity}) 38%,
-    rgba(212, 237, 206, ${(props) => props.opacity}) 62%,
+    rgba(0, 153, 151, ${(props) => props.opacity}) 25%,
+    rgba(82, 153, 0, ${(props) => props.opacity}) 42%,
+    rgba(0, 84, 153, ${(props) => props.opacity}) 58%,
     rgba(250, 250, 252, ${(props) => props.opacity}) 100%
   );
 `
