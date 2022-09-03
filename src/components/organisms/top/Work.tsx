@@ -8,16 +8,14 @@ import iromemoImg from '/public/work/16memo.jpg'
 import geikousaiImg from '/public/work/geikosaiPre.jpg'
 import arestImg from '/public/work/ARest.jpg'
 import { WorksPagination } from '@/components/molecules/WorksPagination'
-import useScroll from '@/hooks/useScroll'
 
 type Props = {
   workRef: (node?: Element | null | undefined) => void
+  scrollY: number
 }
 
-export const Work = ({ workRef }: Props) => {
+export const Work = ({ workRef, scrollY }: Props) => {
   const height = use100vh()
-  const scrollY = useScroll()
-  console.log(scrollY)
   const [isIromemoView, setIsIromemoView] = useState(false)
   const [isGeikosaiView, setIsGeikosaiView] = useState(false)
   const [isARestView, setIsARestView] = useState(false)

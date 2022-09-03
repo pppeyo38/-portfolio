@@ -17,5 +17,6 @@ module.exports = {
     'value-keyword-case': [null],
     'rule-empty-line-before': [null],
     'color-function-notation': [null],
+    'declaration-empty-line-before': [null],
   },
 }

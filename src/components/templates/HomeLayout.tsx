@@ -1,13 +1,17 @@
 import styled from '@emotion/styled'
 import { useState } from 'react'
+import { use100vh } from 'react-div-100vh'
 import { useInView } from 'react-intersection-observer'
 
+import useScroll from '@/hooks/useScroll'
 import { AboutMe } from '@/components/organisms/top/AboutMe'
 import { HeroArea } from '@/components/organisms/top/HeroArea'
 import { Work } from '@/components/organisms/top/Work'
 
 export const HomeLayout = () => {
   const [opacity, setOpacity] = useState<number>(0)
+  const height = use100vh()
+  const scrollY = useScroll()
 
   const buildThresholdList = () => {
     const thresholds = []
@@ -26,7 +30,11 @@ export const HomeLayout = () => {
     onChange: changeWorkBgColor,
   })
   function changeWorkBgColor() {
-    if (!entry) return
+    if (!entry || !height) return
+    if (scrollY === 0 || scrollY === height * 5) {
+      setOpacity(0)
+      return
+    }
     const ratio = Math.round(entry.intersectionRatio * 100) / 100
     setOpacity(ratio)
   }
@@ -34,7 +42,7 @@ export const HomeLayout = () => {
   return (
     <_FixedBg opacity={opacity * 2}>
       <HeroArea />
-      <Work workRef={workRef} />
+      <Work workRef={workRef} scrollY={scrollY} />
       <AboutMe />
     </_FixedBg>
   )
