@@ -18,8 +18,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               list-style: none;
             }
             a {
-              text-decoration: none;
               color: #111012;
+              text-decoration: none;
             }
           `}
         />

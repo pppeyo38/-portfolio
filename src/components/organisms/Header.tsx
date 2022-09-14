@@ -29,7 +29,7 @@ export const Header = () => {
           <_ContentInner height={height ? `${height}px` : '100vh'}>
             <Title />
             <_ContentLists>
-              <_NavList>
+              <ul>
                 <_NavItem>
                   <Link href="">Top</Link>
                 </_NavItem>
@@ -43,7 +43,7 @@ export const Header = () => {
                   <TwitterIcon />
                   <GithubIcon />
                 </_SnsItem>
-              </_NavList>
+              </ul>
             </_ContentLists>
           </_ContentInner>
         </ModalContent>
@@ -69,11 +69,11 @@ const _HeaderInner = styled.div`
 `
 
 const _ContentInner = styled.div<{ height: string }>`
-  max-width: 680px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  max-width: 680px;
   height: ${(props) => props.height};
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
 `
 
 const _ContentLists = styled.div`
@@ -82,9 +82,8 @@ const _ContentLists = styled.div`
   align-items: center;
 `
 
-const _NavList = styled.ul``
-
 const _NavItem = styled.li`
+  margin-bottom: 20px;
   color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.fonts.BVP};
   font-size: 38px;
@@ -92,7 +91,6 @@ const _NavItem = styled.li`
   font-weight: ${({ theme }) => theme.fontWt.Thin};
   letter-spacing: 1.6px;
   line-height: 1.25;
-  margin-bottom: 20px;
 `
 
 const _SnsItem = styled.li`
