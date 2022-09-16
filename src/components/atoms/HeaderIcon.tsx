@@ -19,6 +19,7 @@ const _HeaderIcon = styled.div<{ isOpen: boolean }>`
   position: relative;
   width: 42px;
   height: 42px;
+  cursor: pointer;
 
   span {
     position: absolute;
