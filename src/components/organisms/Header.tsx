@@ -34,7 +34,7 @@ export const Header = () => {
                   <Link href="">Top</Link>
                 </_NavItem>
                 <_NavItem>
-                  <Link href="">Works</Link>
+                  <Link href="/works">Works</Link>
                 </_NavItem>
                 <_NavItem>
                   <Link href="">Profile</Link>
