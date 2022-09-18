@@ -10,9 +10,7 @@ const Profile: NextPage = () => {
         <title>Profile | Peyo Log!</title>
       </Head>
 
-      <main>
-        <ProfileLayout />
-      </main>
+      <ProfileLayout />
     </>
   )
 }

@@ -10,9 +10,7 @@ const Home: NextPage = () => {
         <title>Peyo Log!</title>
       </Head>
 
-      <main>
-        <HomeLayout />
-      </main>
+      <HomeLayout />
     </>
   )
 }

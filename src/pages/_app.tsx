@@ -35,8 +35,10 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             }
           `}
         />
-        <Header isTItle={isTItle} />
-        <Component {...pageProps} />
+        <main>
+          <Header isTItle={isTItle} />
+          <Component {...pageProps} />
+        </main>
       </ThemeProvider>
     </ChakraProvider>
   )

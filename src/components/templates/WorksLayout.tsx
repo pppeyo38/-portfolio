@@ -1,18 +1,47 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
 import { Heading } from '@/components/atoms/Heading'
+import { WorkItem } from '@/components/molecules/WorkItem'
+
+import iromemo from 'public/work/16memo.jpg'
+import arest from 'public/work/ARest.jpg'
+import geikousai from 'public/work/geikosaiPre.jpg'
 
 export const WorksLayout = () => {
   return (
     <_Page>
       <Heading>Works</Heading>
-      <Link href="/works/16memo">16memo</Link>
-      <Link href="/works/geikousai2022-pre">芸工祭2022プレサイト</Link>
-      <Link href="/works/arest">A Rest</Link>
+      <_Works>
+        <_ItemWrapper>
+          <WorkItem imgPath={iromemo} title="16memo" route="16memo" />
+        </_ItemWrapper>
+        <_ItemWrapper>
+          <WorkItem
+            imgPath={geikousai}
+            title="芸工祭2022プレサイト"
+            route="geikousai2022-pre"
+          />
+        </_ItemWrapper>
+        <_ItemWrapper>
+          <WorkItem imgPath={arest} title="A Rest" route="arest" />
+        </_ItemWrapper>
+      </_Works>
     </_Page>
   )
 }
 
 const _Page = styled.div`
   padding-top: 130px;
+`
+const _Works = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1100px;
+  margin: 50px auto 0;
+  padding: 0 15px;
+`
+const _ItemWrapper = styled.div`
+  width: calc(33% - 40px);
 `

@@ -10,9 +10,7 @@ const Works: NextPage = () => {
         <title>Works | Peyo Log!</title>
       </Head>
 
-      <main>
-        <WorksLayout />
-      </main>
+      <WorksLayout />
     </>
   )
 }

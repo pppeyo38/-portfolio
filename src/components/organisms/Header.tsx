@@ -72,6 +72,7 @@ const _HeaderInner = styled.div`
   display: flex;
   max-width: 900px;
   justify-content: space-between;
+  align-items: center;
   margin: 14px auto;
 `
 
