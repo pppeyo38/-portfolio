@@ -7,7 +7,7 @@ const Works: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Peyo Log! | Works</title>
+        <title>Works | Peyo Log!</title>
       </Head>
 
       <main>

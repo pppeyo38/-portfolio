@@ -7,7 +7,7 @@ const Profile: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Peyo Log! | Profile</title>
+        <title>Profile | Peyo Log!</title>
       </Head>
 
       <main>
