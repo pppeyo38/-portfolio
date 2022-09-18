@@ -76,13 +76,13 @@ const _HeaderInner = styled.div`
 `
 
 const _HeaderTitle = styled.h3<{ isView: boolean }>`
-  opacity: ${(props) => (props.isView ? `1` : `0`)};
   color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.fonts.BVP};
   font-size: 24px;
   font-style: italic;
   letter-spacing: 1.6px;
   line-height: 1.25;
+  opacity: ${(props) => (props.isView ? `1` : `0`)};
 `
 
 const _ContentInner = styled.div<{ height: string }>`
