@@ -29,13 +29,15 @@ export const WorkItem: FC<Props> = (props) => {
 }
 
 const _A = styled.a`
-  /* transform: scale(1.08); */
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const _ImgInner = styled.figure`
   position: relative;
-  margin-bottom: 15px;
   overflow: hidden;
+  margin-bottom: 15px;
 `
 
 const _Image = styled.img`
@@ -49,12 +51,12 @@ const _WorkProduct = styled.span`
   display: block;
   width: 120px;
   height: 16px;
+  border: 0.7px solid ${({ theme }) => theme.colors.gray};
+  margin-bottom: 7px;
   color: ${({ theme }) => theme.colors.gray};
   font-family: ${({ theme }) => theme.fonts.ZKGothic};
   font-size: 10px;
   line-height: 1.4;
-  margin-bottom: 7px;
-  border: 0.7px solid ${({ theme }) => theme.colors.gray};
   text-align: center;
 `
 

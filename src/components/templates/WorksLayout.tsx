@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import Link from 'next/link'
 
 import { Heading } from '@/components/atoms/Heading'
 import { WorkItem } from '@/components/molecules/WorkItem'
