@@ -35,12 +35,12 @@ const _Page = styled.div`
 `
 const _Works = styled.section`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   width: 100%;
   max-width: 1100px;
-  margin: 50px auto 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
   padding: 0 15px;
+  margin: 50px auto 0;
 `
 const _ItemWrapper = styled.div`
   width: calc(33% - 40px);
