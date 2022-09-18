@@ -8,7 +8,11 @@ import { Title } from '../atoms/Title'
 import { GithubIcon } from '../atoms/icons/GithubIcon'
 import { TwitterIcon } from '../atoms/icons/TwitterIcon'
 
-export const Header = () => {
+type Props = {
+  isTItle: boolean
+}
+
+export const Header = ({ isTItle }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const height = use100vh()
 
@@ -20,6 +24,9 @@ export const Header = () => {
     <>
       <_Header>
         <_HeaderInner>
+          <_HeaderTitle isView={isTItle && !isOpen}>
+            <Link href="/">Peyo Log!</Link>
+          </_HeaderTitle>
           <HeaderIcon isOpen={isOpen} toggleIcon={toogleIcon} />
         </_HeaderInner>
       </_Header>
@@ -64,8 +71,18 @@ const _Header = styled.header`
 const _HeaderInner = styled.div`
   display: flex;
   max-width: 900px;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin: 14px auto;
+`
+
+const _HeaderTitle = styled.h3<{ isView: boolean }>`
+  opacity: ${(props) => (props.isView ? `1` : `0`)};
+  color: ${({ theme }) => theme.colors.black};
+  font-family: ${({ theme }) => theme.fonts.BVP};
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: 1.6px;
+  line-height: 1.25;
 `
 
 const _ContentInner = styled.div<{ height: string }>`
