@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
+
 import { Heading } from '@/components/atoms/Heading'
 import { WorkItem } from '@/components/molecules/WorkItem'
 
@@ -13,17 +14,31 @@ export const WorksLayout = () => {
       <Heading>Works</Heading>
       <_Works>
         <_ItemWrapper>
-          <WorkItem imgPath={iromemo} title="16memo" route="16memo" />
+          <WorkItem
+            imgPath={iromemo}
+            title="16memo"
+            route="16memo"
+            product="WEB APPLICATION"
+            role="Backend/Frontend"
+          />
         </_ItemWrapper>
         <_ItemWrapper>
           <WorkItem
             imgPath={geikousai}
             title="芸工祭2022プレサイト"
             route="geikousai2022-pre"
+            product="WEB SITE"
+            role="Frontend"
           />
         </_ItemWrapper>
         <_ItemWrapper>
-          <WorkItem imgPath={arest} title="A Rest" route="arest" />
+          <WorkItem
+            imgPath={arest}
+            title="A Rest"
+            route="arest"
+            product="WEB APPLICATION"
+            role="Frontend/Backend/Design"
+          />
         </_ItemWrapper>
       </_Works>
     </_Page>
