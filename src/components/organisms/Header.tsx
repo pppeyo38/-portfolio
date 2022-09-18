@@ -29,15 +29,15 @@ export const Header = () => {
           <_ContentInner height={height ? `${height}px` : '100vh'}>
             <Title />
             <_ContentLists>
-              <ul>
+              <ul onClick={toogleIcon}>
                 <_NavItem>
-                  <Link href="">Top</Link>
+                  <Link href="/">Top</Link>
                 </_NavItem>
                 <_NavItem>
                   <Link href="/works">Works</Link>
                 </_NavItem>
                 <_NavItem>
-                  <Link href="">Profile</Link>
+                  <Link href="/profile">Profile</Link>
                 </_NavItem>
                 <_SnsItem>
                   <TwitterIcon />
