@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { WorksLayout } from '@/components/templates/WorksLayout'
+import { WorksBlock } from '@/components/organisms/works/WorksBlock'
+import { LowpageLayout } from '@/components/templates/LowpageLayout'
 
 const Works: NextPage = () => {
   return (
@@ -10,7 +11,9 @@ const Works: NextPage = () => {
         <title>Works | Peyo Log!</title>
       </Head>
 
-      <WorksLayout />
+      <LowpageLayout heading="Works">
+        <WorksBlock />
+      </LowpageLayout>
     </>
   )
 }

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { ProfileLayout } from '@/components/templates/ProfileLayout'
+import { LowpageLayout } from '@/components/templates/LowpageLayout'
 
 const Profile: NextPage = () => {
   return (
@@ -10,7 +10,7 @@ const Profile: NextPage = () => {
         <title>Profile | Peyo Log!</title>
       </Head>
 
-      <ProfileLayout />
+      <LowpageLayout heading="Profile">プロフィール</LowpageLayout>
     </>
   )
 }
