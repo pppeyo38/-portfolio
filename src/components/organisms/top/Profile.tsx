@@ -6,12 +6,12 @@ import { Heading } from '@/components/atoms/Heading'
 import profile from '/public/profile.png'
 import { ViewMore } from '@/components/atoms/buttons/ViewMore'
 
-export const AboutMe = () => {
+export const Profile = () => {
   const height = use100vh()
   return (
     <_Section height={height ? `${height}px` : '100vh'}>
       <_Content>
-        <Heading>About Me</Heading>
+        <Heading>Profile</Heading>
         <_Detail>
           <_ImgWrap>
             <_ImageFigure>

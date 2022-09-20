@@ -3,8 +3,8 @@ import { useState } from 'react'
 import { use100vh } from 'react-div-100vh'
 import { useInView } from 'react-intersection-observer'
 
-import { AboutMe } from '@/components/organisms/top/AboutMe'
 import { HeroArea } from '@/components/organisms/top/HeroArea'
+import { Profile } from '@/components/organisms/top/Profile'
 import { Work } from '@/components/organisms/top/Work'
 import useScroll from '@/hooks/useScroll'
 
@@ -39,7 +39,7 @@ export const HomeLayout = () => {
     <_FixedBg opacity={opacity * 2} isEdge={scrollY === 0}>
       <HeroArea />
       <Work workRef={workRef} scrollY={scrollY} />
-      <AboutMe />
+      <Profile />
     </_FixedBg>
   )
 }
