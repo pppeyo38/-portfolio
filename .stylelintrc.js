@@ -18,5 +18,6 @@ module.exports = {
     'rule-empty-line-before': [null],
     'color-function-notation': [null],
     'declaration-empty-line-before': [null],
+    'length-zero-no-unit': [null],
   },
 }
