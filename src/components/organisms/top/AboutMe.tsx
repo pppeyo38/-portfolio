@@ -4,6 +4,7 @@ import { use100vh } from 'react-div-100vh'
 
 import { Heading } from '@/components/atoms/Heading'
 import profile from '/public/profile.png'
+import { ViewMore } from '@/components/atoms/buttons/ViewMore'
 
 export const AboutMe = () => {
   const height = use100vh()
@@ -27,9 +28,12 @@ export const AboutMe = () => {
               <br />
               Webフロントエンドエンジニアを志望しています。
               <br />
-              プログラミングとデザインシステムが好きです。
+              デザインシステムに興味があります。
               <br />
             </_Introduction>
+            <_ButtonWrap>
+              <ViewMore path="/profile" />
+            </_ButtonWrap>
           </_TextWrap>
         </_Detail>
       </_Content>
@@ -67,7 +71,9 @@ const _ImageFigure = styled.figure`
 `
 
 const _TextWrap = styled.div`
+  display: flex;
   width: 435px;
+  flex-direction: column;
 `
 
 const _NameWrap = styled.div`
@@ -99,4 +105,9 @@ const _Introduction = styled.p`
   font-size: 16px;
   letter-spacing: 0.96px;
   line-height: 1.625;
+`
+
+const _ButtonWrap = styled.div`
+  align-self: flex-end;
+  margin-top: 24px;
 `
