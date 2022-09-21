@@ -67,7 +67,7 @@ const _NameWrap = styled.div`
 const _MyName = styled.h2`
   color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.fonts.ZKGothic};
-  font-size: 32px;
+  font-size: 24px;
   font-weight: ${({ theme }) => theme.fontWt.Regular};
   letter-spacing: 0.96px;
   line-height: 1.43;

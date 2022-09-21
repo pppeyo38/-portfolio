@@ -24,6 +24,17 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;1,100;1,300&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
             rel="stylesheet"
           />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            charSet="UTF-8"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          />
         </Head>
         <body>
           <Main />
