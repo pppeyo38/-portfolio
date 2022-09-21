@@ -24,9 +24,9 @@ export const Header = ({ isTItle }: Props) => {
     <>
       <_Header>
         <_HeaderInner>
-          <_HeaderTitle isView={isTItle && !isOpen}>
-            <Link href="/">Peyo Log!</Link>
-          </_HeaderTitle>
+          <Link href="/">
+            <_HeaderTitle isView={isTItle && !isOpen}>Peyo Log!</_HeaderTitle>
+          </Link>
           <HeaderIcon isOpen={isOpen} toggleIcon={toogleIcon} />
         </_HeaderInner>
       </_Header>
@@ -76,7 +76,7 @@ const _HeaderInner = styled.div`
   margin: 14px auto;
 `
 
-const _HeaderTitle = styled.h3<{ isView: boolean }>`
+const _HeaderTitle = styled.a<{ isView: boolean }>`
   color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.fonts.BVP};
   font-size: 24px;
@@ -84,6 +84,12 @@ const _HeaderTitle = styled.h3<{ isView: boolean }>`
   letter-spacing: 1.6px;
   line-height: 1.25;
   opacity: ${(props) => (props.isView ? `1` : `0`)};
+  transition: all 0.4s;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.purple};
+    cursor: pointer;
+  }
 `
 
 const _ContentInner = styled.div<{ height: string }>`

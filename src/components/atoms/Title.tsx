@@ -5,7 +5,7 @@ export const Title = () => {
 }
 
 const _Title = styled.h1`
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.purple};
   font-family: ${({ theme }) => theme.fonts.BVP};
   font-size: 66px;
   font-style: italic;

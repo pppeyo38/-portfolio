@@ -4,6 +4,7 @@ export const theme = {
     gray: '#5D5C60',
     lightGray: '#E9E9F2',
     white: '#FAFAFC',
+    purple: '#6667AB',
   },
   fonts: {
     BVP: `'Be Vietnam Pro', 'sans-serif'`,

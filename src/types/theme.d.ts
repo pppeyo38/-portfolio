@@ -13,6 +13,7 @@ interface Colors {
   gray: string
   lightGray: string
   white: string
+  purple: string
 }
 
 interface Fonts {

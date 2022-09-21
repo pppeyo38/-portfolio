@@ -29,7 +29,7 @@ const _TitleWrap = styled.div`
 `
 
 const _SubTitle = styled.h2`
-  color: ${({ theme }) => theme.colors.gray};
+  color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.fonts.BVP};
   font-size: 20px;
   font-weight: ${({ theme }) => theme.fontWt.Thin};
