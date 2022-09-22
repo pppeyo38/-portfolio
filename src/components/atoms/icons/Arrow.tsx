@@ -31,9 +31,9 @@ export const Arrow = ({ isPrev, onClick }: Props) => {
 
 const _Wrap = styled.div<{ isPrev: boolean | undefined }>`
   display: grid;
-  place-content: center;
   width: 50px;
   height: 50px;
-  ${(props) => props.isPrev && `transform: rotate(180deg);`}
   cursor: pointer;
+  place-content: center;
+  ${(props) => props.isPrev && `transform: rotate(180deg);`}
 `

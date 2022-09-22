@@ -3,6 +3,8 @@ import Head from 'next/head'
 
 import { WorkLayout } from '@/components/templates/WorkLayout'
 
+import images from '@/data/works/iromemoImg.json'
+
 const iromemo: NextPage = () => {
   return (
     <>
@@ -10,7 +12,7 @@ const iromemo: NextPage = () => {
         <title>16memo | Works | Peyo Log!</title>
       </Head>
 
-      <WorkLayout />
+      <WorkLayout images={images} workTitle="16memo" />
     </>
   )
 }
