@@ -55,8 +55,8 @@ const _Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
   margin-bottom: 50px;
+  gap: 20px;
 `
 
 const _ImgWrap = styled.figure`
