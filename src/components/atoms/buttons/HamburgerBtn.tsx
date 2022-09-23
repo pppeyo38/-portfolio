@@ -5,17 +5,17 @@ type Props = {
   toggleIcon: () => void
 }
 
-export const HeaderIcon = ({ isOpen, toggleIcon }: Props) => {
+export const HamburgerBtn = ({ isOpen, toggleIcon }: Props) => {
   return (
-    <_HeaderIcon isOpen={isOpen} onClick={toggleIcon}>
+    <_HamburgerBtn isOpen={isOpen} onClick={toggleIcon}>
       <span />
       <span />
       <span />
-    </_HeaderIcon>
+    </_HamburgerBtn>
   )
 }
 
-const _HeaderIcon = styled.div<{ isOpen: boolean }>`
+const _HamburgerBtn = styled.button<{ isOpen: boolean }>`
   position: relative;
   width: 42px;
   height: 42px;
