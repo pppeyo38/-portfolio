@@ -5,13 +5,12 @@ import { WorkItem } from '@/components/molecules/link/WorkItem'
 import { worksListProps } from '@/types/workTypes'
 
 export const WorksBlock = ({ worksList }: worksListProps) => {
-  console.log(worksList)
   return (
     <_Works>
       {worksList.map((item, index) => (
         <_ItemWrapper key={index}>
           <WorkItem
-            imgPath={item.img}
+            img={item.img}
             title={item.title}
             route={item.route}
             product={item.product}

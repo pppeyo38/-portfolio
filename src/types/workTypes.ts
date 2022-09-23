@@ -1,11 +1,13 @@
+export type worksListContent = {
+  img: string
+  title: string
+  route: string
+  product: string
+  role: string
+}
+
 export type worksListProps = {
-  worksList: {
-    img: string
-    title: string
-    route: string
-    product: string
-    role: string
-  }[]
+  worksList: worksListContent[]
 }
 
 export type workPageProps = {

@@ -6,22 +6,16 @@ import { CategoryTag } from '@/components/atoms/text/CategoryTag'
 import { HeadingJp } from '@/components/atoms/text/HeadingJp'
 import { TextJp } from '@/components/atoms/text/TextJp'
 
-type Props = {
-  imgPath: string
-  title: string
-  route: string
-  product?: string
-  role?: string
-}
+import { worksListContent } from '@/types/workTypes'
 
-export const WorkItem: FC<Props> = (props) => {
-  const { imgPath, title, route, product, role } = props
+export const WorkItem: FC<worksListContent> = (props) => {
+  const { img, title, route, product, role } = props
 
   return (
     <Link href={`/works/${route}`}>
       <_A>
         <_ImgWrap>
-          <_Image src={imgPath} alt={title} />
+          <_Image src={img} alt={title} />
         </_ImgWrap>
         <_TagWrap>
           <CategoryTag>{product}</CategoryTag>
