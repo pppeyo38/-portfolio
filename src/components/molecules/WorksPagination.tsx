@@ -5,7 +5,7 @@ import { Heading } from '@/components/atoms/text/Heading'
 export const WorksPagination = ({ height }: { height: string }) => {
   return (
     <_Pagination height={height}>
-      <Heading>Works</Heading>
+      <Heading fontSize="45px">Works</Heading>
       <_PageList>
         <_PageListItems>01</_PageListItems>
         <_VerticalLine />

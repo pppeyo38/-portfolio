@@ -11,7 +11,7 @@ type Props = {
 export const LowpageLayout: FC<Props> = ({ heading, children }) => {
   return (
     <_Page>
-      <Heading>{heading}</Heading>
+      <Heading fontSize="45px">{heading}</Heading>
       {children}
     </_Page>
   )

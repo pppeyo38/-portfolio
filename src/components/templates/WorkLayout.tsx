@@ -1,12 +1,16 @@
 import styled from '@emotion/styled'
 
-import { workPageProps } from '@/types/workPageProps'
+import { Heading } from '@/components/atoms/text/Heading'
+
+import { workPageProps } from '@/types/workTypes'
 
 export const WorkLayout = ({ images, workTitle }: workPageProps) => {
   return (
     <_Page>
       <_WorkTitleWrap>
-        <_SubHeading>Works</_SubHeading>
+        <Heading fontSize="16px" isSub>
+          Works
+        </Heading>
         <_WorkTitle>{workTitle}</_WorkTitle>
       </_WorkTitleWrap>
       <_Container>
@@ -27,17 +31,6 @@ const _Page = styled.div`
 const _WorkTitleWrap = styled.div`
   width: fit-content;
   margin: 0 auto 50px;
-  text-align: center;
-`
-
-const _SubHeading = styled.span`
-  color: ${({ theme }) => theme.colors.gray};
-  font-family: ${({ theme }) => theme.fonts.BVP};
-  font-size: 16px;
-  font-style: italic;
-  font-weight: ${({ theme }) => theme.fontWt.Light};
-  letter-spacing: 1.6px;
-  line-height: 1.25;
   text-align: center;
 `
 

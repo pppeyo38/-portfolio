@@ -1,41 +1,24 @@
 import styled from '@emotion/styled'
 
-import { WorkItem } from '@/components/molecules/WorkItem'
+import { WorkItem } from '@/components/molecules/link/WorkItem'
 
-import iromemo from 'public/work/16memo.jpg'
-import arest from 'public/work/ARest.jpg'
-import geikousai from 'public/work/geikosaiPre.jpg'
+import { worksListProps } from '@/types/workTypes'
 
-export const WorksBlock = () => {
+export const WorksBlock = ({ worksList }: worksListProps) => {
+  console.log(worksList)
   return (
     <_Works>
-      <_ItemWrapper>
-        <WorkItem
-          imgPath={iromemo}
-          title="16memo"
-          route="16memo"
-          product="WEB APPLICATION"
-          role="Backend/Frontend"
-        />
-      </_ItemWrapper>
-      <_ItemWrapper>
-        <WorkItem
-          imgPath={geikousai}
-          title="芸工祭2022プレサイト"
-          route="geikousai2022-pre"
-          product="WEB SITE"
-          role="Frontend"
-        />
-      </_ItemWrapper>
-      <_ItemWrapper>
-        <WorkItem
-          imgPath={arest}
-          title="A Rest"
-          route="arest"
-          product="WEB APPLICATION"
-          role="Frontend/Backend/Design"
-        />
-      </_ItemWrapper>
+      {worksList.map((item, index) => (
+        <_ItemWrapper key={index}>
+          <WorkItem
+            imgPath={item.img}
+            title={item.title}
+            route={item.route}
+            product={item.product}
+            role={item.role}
+          />
+        </_ItemWrapper>
+      ))}
     </_Works>
   )
 }

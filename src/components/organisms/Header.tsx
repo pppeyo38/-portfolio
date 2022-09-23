@@ -6,7 +6,6 @@ import { use100vh } from 'react-div-100vh'
 import { GithubIcon } from '../atoms/icons/GithubIcon'
 import { HeaderIcon } from '../atoms/icons/HeaderIcon'
 import { TwitterIcon } from '../atoms/icons/TwitterIcon'
-import { Title } from '../atoms/text/Title'
 import { HeaderTitle } from '@/components/molecules/link/HeaderTitle'
 
 type Props = {

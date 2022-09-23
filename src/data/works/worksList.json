@@ -1,0 +1,23 @@
+[
+  {
+    "img": "/work/16memo.jpg",
+    "title": "16memo",
+    "route": "16memo",
+    "product": "WEB APP",
+    "role": "Backend/Frontend"
+  },
+  {
+    "img": "/work/geikosaiPre.jpg",
+    "title": "芸工祭2022プレサイト",
+    "route": "geikousai2022-pre",
+    "product": "WEB SITE",
+    "role": "Frontend"
+  },
+  {
+    "img": "/work/ARest.jpg",
+    "title": "A Rest",
+    "route": "arest",
+    "product": "WEB APP",
+    "role": "Frontend/Backend/Design"
+  }
+]
