@@ -1,18 +1,26 @@
 import { Modal, ModalContent, useDisclosure } from '@chakra-ui/react'
 import styled from '@emotion/styled'
+import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 import { use100vh } from 'react-div-100vh'
 
 import { HamburgerBtn } from '../atoms/buttons/HamburgerBtn'
 import { HeaderTitle } from '@/components/molecules/link/HeaderTitle'
 import { NavList } from '@/components/molecules/link/NavList'
 
-type Props = {
-  isTItle: boolean
-}
-
-export const Header = ({ isTItle }: Props) => {
+export const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const height = use100vh()
+  const [isTItle, setIsTitle] = useState(true)
+  const router = useRouter()
+
+  useEffect(() => {
+    if (router.route !== '/') {
+      setIsTitle(true)
+    } else {
+      setIsTitle(false)
+    }
+  }, [router.route])
 
   const toogleIcon = () => {
     isOpen ? onClose() : onOpen()
