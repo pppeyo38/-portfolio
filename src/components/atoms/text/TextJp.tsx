@@ -6,11 +6,11 @@ type Props = {
   children: ReactNode
 }
 
-export const JpText = ({ fontSize, children }: Props) => {
-  return <_JpText fontSize={fontSize}>{children}</_JpText>
+export const TextJp = ({ fontSize, children }: Props) => {
+  return <_TextJp fontSize={fontSize}>{children}</_TextJp>
 }
 
-const _JpText = styled.p<{ fontSize: string }>`
+const _TextJp = styled.p<{ fontSize: string }>`
   font-family: ${({ theme }) => theme.fonts.ZKGothic};
   font-size: ${(props) => props.fontSize};
   letter-spacing: 0.96px;

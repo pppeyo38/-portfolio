@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
-import { Heading } from '@/components/atoms/Heading'
+
+import { Heading } from '@/components/atoms/text/Heading'
 
 export const WorksPagination = ({ height }: { height: string }) => {
   return (

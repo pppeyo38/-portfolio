@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { FC, ReactNode } from 'react'
-import { Heading } from '@/components/atoms/Heading'
+
+import { Heading } from '@/components/atoms/text/Heading'
 
 type Props = {
   heading: string

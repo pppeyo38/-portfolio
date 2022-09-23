@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import { use100vh } from 'react-div-100vh'
 
-import { MyProfileBlock } from '../profile/MyProfileBlock'
-import { Heading } from '@/components/atoms/Heading'
 import { ViewMore } from '@/components/atoms/buttons/ViewMore'
-import { JpText } from '@/components/atoms/text/TextJp'
+import { Heading } from '@/components/atoms/text/Heading'
+import { TextJp } from '@/components/atoms/text/TextJp'
+import { MyProfileBlock } from '@/components/organisms/profile/MyProfileBlock'
 
 export const Profile = () => {
   const height = use100vh()
@@ -13,7 +13,7 @@ export const Profile = () => {
       <Heading>Profile</Heading>
       <_ContentInner>
         <MyProfileBlock>
-          <JpText fontSize="16px">
+          <TextJp fontSize="16px">
             名古屋市立大学芸術工学部情報環境デザイン学科3年生。
             <br />
             プログラミングとデザインシステムに興味があります。
@@ -21,7 +21,7 @@ export const Profile = () => {
             業務支援サービスの開発と提供を行うIT企業で
             <br />
             Webエンジニアとして長期インターンシップをしています。
-          </JpText>
+          </TextJp>
           <_ButtonWrap>
             <ViewMore path="/profile" />
           </_ButtonWrap>
