@@ -3,10 +3,11 @@ import styled from '@emotion/styled'
 import Link from 'next/link'
 import { use100vh } from 'react-div-100vh'
 
-import { HeaderIcon } from '../atoms/HeaderIcon'
-import { Title } from '../atoms/Title'
 import { GithubIcon } from '../atoms/icons/GithubIcon'
+import { HeaderIcon } from '../atoms/icons/HeaderIcon'
 import { TwitterIcon } from '../atoms/icons/TwitterIcon'
+import { Title } from '../atoms/text/Title'
+import { HeaderTitle } from '@/components/molecules/link/HeaderTitle'
 
 type Props = {
   isTItle: boolean
@@ -24,9 +25,7 @@ export const Header = ({ isTItle }: Props) => {
     <>
       <_Header>
         <_HeaderInner>
-          <Link href="/">
-            <_HeaderTitle isView={isTItle && !isOpen}>Peyo Log!</_HeaderTitle>
-          </Link>
+          <HeaderTitle isView={isTItle && !isOpen} fontSize="24px" />
           <HeaderIcon isOpen={isOpen} toggleIcon={toogleIcon} />
         </_HeaderInner>
       </_Header>
@@ -34,7 +33,7 @@ export const Header = ({ isTItle }: Props) => {
       <Modal onClose={onClose} size="full" isOpen={isOpen}>
         <ModalContent alignItems="center">
           <_ContentInner height={height ? `${height}px` : '100vh'}>
-            <Title />
+            <HeaderTitle isView fontSize="66px" />
             <_ContentLists>
               <ul onClick={toogleIcon}>
                 <_NavItem>
@@ -74,22 +73,6 @@ const _HeaderInner = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 14px auto;
-`
-
-const _HeaderTitle = styled.a<{ isView: boolean }>`
-  color: ${({ theme }) => theme.colors.black};
-  font-family: ${({ theme }) => theme.fonts.BVP};
-  font-size: 24px;
-  font-style: italic;
-  letter-spacing: 1.6px;
-  line-height: 1.25;
-  opacity: ${(props) => (props.isView ? `1` : `0`)};
-  transition: all 0.4s;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.purple};
-    cursor: pointer;
-  }
 `
 
 const _ContentInner = styled.div<{ height: string }>`

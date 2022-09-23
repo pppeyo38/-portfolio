@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import { use100vh } from 'react-div-100vh'
 
-import { Title } from '@/components/atoms/Title'
 import { TextEg } from '@/components/atoms/text/TextEg'
+import { Title } from '@/components/atoms/text/Title'
 
 export const HeroArea = () => {
   const height = use100vh()
@@ -10,7 +10,7 @@ export const HeroArea = () => {
   return (
     <_Section height={height ? `${height}px` : '100vh'}>
       <_TitleWrap>
-        <Title />
+        <Title fontSize="66px" />
         <TextEg fontSize="20px">Isono Tamaki’s portfolio</TextEg>
       </_TitleWrap>
     </_Section>
