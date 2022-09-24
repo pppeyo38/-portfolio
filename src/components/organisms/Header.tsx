@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { use100vh } from 'react-div-100vh'
 
-import { HamburgerBtn } from '../atoms/buttons/HamburgerBtn'
+import { HamburgerBtn } from '@/components/atoms/buttons/HamburgerBtn'
 import { HeaderTitle } from '@/components/molecules/link/HeaderTitle'
 import { NavList } from '@/components/molecules/link/NavList'
 

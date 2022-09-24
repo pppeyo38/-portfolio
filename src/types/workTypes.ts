@@ -17,6 +17,11 @@ export type workIntroduction = {
   role: string
 }
 
+export type workDetailContent = {
+  theme: string
+  text: string
+}
+
 export type workPageProps = {
   images: {
     path: string
@@ -24,4 +29,5 @@ export type workPageProps = {
   }[]
   workTitle: string
   introduction: workIntroduction
+  detail: workDetailContent[]
 }

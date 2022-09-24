@@ -1,12 +1,13 @@
 import styled from '@emotion/styled'
 
-import { IntroductionBlock } from '../organisms/works/IntroductionBlock'
 import { Heading } from '@/components/atoms/text/Heading'
+import { DetailContentsBlock } from '@/components/organisms/works/DetailContentsBlock'
+import { IntroductionBlock } from '@/components/organisms/works/IntroductionBlock'
 
 import { workPageProps } from '@/types/workTypes'
 
 export const WorkLayout = (props: workPageProps) => {
-  const { workTitle, images, introduction } = props
+  const { workTitle, images, introduction, detail } = props
 
   return (
     <_Page>
@@ -21,6 +22,7 @@ export const WorkLayout = (props: workPageProps) => {
           <img src={images[0].path} alt={images[0].alt} />
         </figure>
         <IntroductionBlock {...introduction} />
+        <DetailContentsBlock detail={detail} />
       </_Container>
     </_Page>
   )

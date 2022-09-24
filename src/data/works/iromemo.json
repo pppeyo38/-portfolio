@@ -2,9 +2,16 @@
   "images": [{ "path": "/work/16memo.jpg", "alt": "16memo アイキャッチ" }],
   "workTitle": "16memo",
   "introduction": {
-    "text": "『推しごとに色を管理したい』というニーズから生まれたWebアプリケーションです。",
+    "text": "『推しごとに色を管理したい』というニーズから生まれたWebアプリケーションです。大学の友人たちと、5人グループで制作しました。",
     "period": "2022.05~08",
     "usedLanguage": "React, TypeScript, Ruby on Rails, Firebase Authentication",
     "role": "Backend/Frontend"
-  }
+  },
+  "detail": [
+    {
+      "theme": "Concept",
+      "text": "テキストテキストテキストあいうえお〜〜〜〜〜〜ああああああああテキストテキストテキストあいうえお〜〜〜〜〜〜ああああああああテキストテキストテキストあいうえお〜〜〜〜〜〜あああああああああああああああテキストテキストテキストあいうえお〜〜〜〜〜〜ああああああああ"
+    },
+    { "theme": "System", "text": "かきくけこさしすせそ" }
+  ]
 }

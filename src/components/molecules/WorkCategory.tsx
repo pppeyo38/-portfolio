@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import { ReactNode } from 'react'
 
-import { CategoryTag } from '../atoms/text/CategoryTag'
-import { TextJp } from '../atoms/text/TextJp'
+import { CategoryTag } from '@/components/atoms/text/CategoryTag'
+import { TextJp } from '@/components/atoms/text/TextJp'
 
 type Props = {
   tag: string
