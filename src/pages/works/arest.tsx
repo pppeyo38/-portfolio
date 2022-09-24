@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import { WorkLayout } from '@/components/templates/WorkLayout'
 
-import images from '@/data/works/aRestImg.json'
+import aRestData from '@/data/works/aRest.json'
 
 const aRest: NextPage = () => {
   return (
@@ -12,7 +12,7 @@ const aRest: NextPage = () => {
         <title>A Rest | Works | Peyo Log!</title>
       </Head>
 
-      <WorkLayout images={images} workTitle="A Rest" />
+      <WorkLayout {...aRestData} />
     </>
   )
 }

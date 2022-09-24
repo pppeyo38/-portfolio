@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import { WorkLayout } from '@/components/templates/WorkLayout'
 
-import images from '@/data/works/geikousaiImg.json'
+import geikousaiData from '@/data/works/geikousai.json'
 
 const geikousai: NextPage = () => {
   return (
@@ -12,7 +12,7 @@ const geikousai: NextPage = () => {
         <title>芸工祭2022プレサイト | Works | Peyo Log!</title>
       </Head>
 
-      <WorkLayout images={images} workTitle="芸工祭2022プレサイト" />
+      <WorkLayout {...geikousaiData} />
     </>
   )
 }

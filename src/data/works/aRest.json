@@ -1,0 +1,15 @@
+{
+  "images": [
+    {
+      "path": "/work/ARest.jpg",
+      "alt": "A Rest アイキャッチ"
+    }
+  ],
+  "workTitle": "A Rest",
+  "introduction": {
+    "text": "CS50の最終課題にて制作した、カフェ訪問記録Webアプリです。",
+    "period": "2022.02~03",
+    "usedLanguage": "Ruby on Rails",
+    "role": "Design/Frontend/Backend"
+  }
+}
