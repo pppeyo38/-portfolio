@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { FC } from 'react'
 
 import { CategoryTag } from '@/components/atoms/text/CategoryTag'
 import { HeadingJp } from '@/components/atoms/text/HeadingJp'
@@ -8,7 +7,7 @@ import { TextJp } from '@/components/atoms/text/TextJp'
 
 import { worksListContent } from '@/types/workTypes'
 
-export const WorkItem: FC<worksListContent> = (props) => {
+export const WorkItem = (props: worksListContent) => {
   const { img, title, route, product, role } = props
 
   return (

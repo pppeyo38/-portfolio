@@ -1,10 +1,13 @@
 import styled from '@emotion/styled'
 
+import { IntroductionBlock } from '../organisms/works/IntroductionBlock'
 import { Heading } from '@/components/atoms/text/Heading'
 
 import { workPageProps } from '@/types/workTypes'
 
-export const WorkLayout = ({ images, workTitle }: workPageProps) => {
+export const WorkLayout = (props: workPageProps) => {
+  const { workTitle, images, introduction } = props
+
   return (
     <_Page>
       <_WorkTitleWrap>
@@ -14,11 +17,10 @@ export const WorkLayout = ({ images, workTitle }: workPageProps) => {
         <_WorkTitle>{workTitle}</_WorkTitle>
       </_WorkTitleWrap>
       <_Container>
-        {images.map((img, index) => (
-          <_ImgWrap key={index}>
-            <img src={img.path} alt={img.alt} />
-          </_ImgWrap>
-        ))}
+        <figure>
+          <img src={images[0].path} alt={images[0].alt} />
+        </figure>
+        <IntroductionBlock {...introduction} />
       </_Container>
     </_Page>
   )
@@ -45,13 +47,6 @@ const _WorkTitle = styled.h2`
 `
 
 const _Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 50px;
-  gap: 20px;
-`
-
-const _ImgWrap = styled.figure`
   max-width: 880px;
+  margin: 0 auto 50px;
 `

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { FC, ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 import { Heading } from '@/components/atoms/text/Heading'
 
@@ -8,7 +8,7 @@ type Props = {
   children: ReactNode
 }
 
-export const LowpageLayout: FC<Props> = ({ heading, children }) => {
+export const LowpageLayout = ({ heading, children }: Props) => {
   return (
     <_Page>
       <Heading fontSize="45px">{heading}</Heading>

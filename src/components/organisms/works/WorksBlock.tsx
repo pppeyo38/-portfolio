@@ -9,13 +9,7 @@ export const WorksBlock = ({ worksList }: worksListProps) => {
     <_Works>
       {worksList.map((item, index) => (
         <_ItemWrapper key={index}>
-          <WorkItem
-            img={item.img}
-            title={item.title}
-            route={item.route}
-            product={item.product}
-            role={item.role}
-          />
+          <WorkItem {...item} />
         </_ItemWrapper>
       ))}
     </_Works>
