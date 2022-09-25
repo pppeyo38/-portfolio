@@ -24,7 +24,23 @@ const _Works = styled.section`
   justify-content: space-around;
   padding: 0 15px;
   margin: 0 auto;
+
+  @media (max-width: 960px) {
+    max-width: 800px;
+  }
+
+  @media (max-width: 520px) {
+    max-width: 380px;
+  }
 `
 const _ItemWrapper = styled.div`
   width: calc(33% - 40px);
+
+  @media (max-width: 960px) {
+    width: calc(50% - 40px);
+  }
+
+  @media (max-width: 520px) {
+    width: calc(100% - 40px);
+  }
 `
