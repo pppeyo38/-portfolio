@@ -23,7 +23,7 @@ export const Profile = () => {
             Webエンジニアとして長期インターンシップをしています。
           </TextJp>
           <_ButtonWrap>
-            <ViewMore path="/profile" />
+            <ViewMore path="/profile">VIEW MORE</ViewMore>
           </_ButtonWrap>
         </MyProfileBlock>
       </_ContentInner>

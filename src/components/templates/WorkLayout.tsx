@@ -29,7 +29,7 @@ export const WorkLayout = (props: workPageProps) => {
 }
 
 const _Page = styled.div`
-  padding-top: 130px;
+  padding: 130px 0;
 `
 
 const _WorkTitleWrap = styled.div`

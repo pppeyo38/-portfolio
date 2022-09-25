@@ -1,17 +1,19 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
+import { ReactNode } from 'react'
 
 import { TextEg } from '@/components/atoms/text/TextEg'
 
 type Props = {
   path: string
+  children: ReactNode
 }
 
-export const ViewMore = ({ path }: Props) => {
+export const ViewMore = ({ path, children }: Props) => {
   return (
     <Link href={path}>
       <_A>
-        <TextEg fontSize="20px">VIEW MORE</TextEg>
+        <TextEg fontSize="20px">{children}</TextEg>
         <_Border />
       </_A>
     </Link>
