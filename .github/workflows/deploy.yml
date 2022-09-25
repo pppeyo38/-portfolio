@@ -8,19 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.inputs.ref }}
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '15'
-      - name: build
-        shell: bash
-        run: |
-          yarn
-          yarn build
-      - uses: amondnet/vercel-action@v20
+      - uses: ./
+        id: vercel-action
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: ./
+      - name: preview-url
+        run: |
+          echo ${{ steps.vercel-action.outputs.preview-url }}
