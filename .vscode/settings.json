@@ -5,5 +5,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
+  },
+  "yaml.schemas": {
+    "https://json.schemastore.org/sourcehut-build-0.65.0.json": "file:///Users/isonotamaki/Desktop/web/portfolio/.github/workflows/deploy.yml"
   }
 }
