@@ -1,14 +1,15 @@
-import { calc } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { use100vh } from 'react-div-100vh'
 
+import { WorkImage } from '@/components/atoms/WorkImage'
+import { Heading } from '@/components/atoms/text/Heading'
+import { WorksPagination } from '@/components/molecules/WorksPagination'
+
 import iromemoImg from '/public/work/16memo.jpg'
 import geikousaiImg from '/public/work/geikosaiPre.jpg'
 import arestImg from '/public/work/ARest.jpg'
-import { Heading } from '@/components/atoms/text/Heading'
-import { WorksPagination } from '@/components/molecules/WorksPagination'
 
 type Props = {
   workRef: (node?: Element | null | undefined) => void
@@ -65,27 +66,21 @@ export const Work = ({ workRef, scrollY }: Props) => {
               isFix={height <= scrollY && scrollY < height * 2}
               isView={isIromemoView}
             >
-              <_ImgInner>
-                <img src={iromemoImg.src} alt="16memo" />
-              </_ImgInner>
+              <WorkImage imgPath={iromemoImg} imgAlt="16memo" />
             </_WrapperIromemo>
             <_WrapperGeiko
               height={height ? `${height}px` : '100vh'}
               isFix={height * 2 <= scrollY && scrollY < height * 3}
               isView={isGeikosaiView}
             >
-              <_ImgInner>
-                <img src={geikousaiImg.src} alt="geikousai pre" />
-              </_ImgInner>
+              <WorkImage imgPath={geikousaiImg} imgAlt="geikousai pre" />
             </_WrapperGeiko>
             <_WrapperARest
               height={height ? `${height}px` : '100vh'}
               isFix={height * 3 <= scrollY && scrollY < height * 4}
               isView={isARestView}
             >
-              <_ImgInner>
-                <img src={arestImg.src} alt="A Rest" />
-              </_ImgInner>
+              <WorkImage imgPath={arestImg} imgAlt="A Rest" />
             </_WrapperARest>
             <_WorkSticky
               height={height ? `${height}px` : '100vh'}
@@ -97,9 +92,7 @@ export const Work = ({ workRef, scrollY }: Props) => {
               <_StickyPagination isFix={false}>
                 <WorksPagination />
               </_StickyPagination>
-              <_ImgInner>
-                <img src={arestImg.src} alt="A Rest" />
-              </_ImgInner>
+              <WorkImage imgPath={arestImg} imgAlt="A Rest" />
             </_WorkSticky>
           </_ScrollArea>
         </_Section>
@@ -184,8 +177,4 @@ const _WorkSticky = styled.div<{ height: string; isView: boolean }>`
   align-items: center;
   justify-content: center;
   opacity: ${(props) => (props.isView ? 1 : 0)};
-`
-
-const _ImgInner = styled.figure`
-  max-width: 800px;
 `
