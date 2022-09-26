@@ -1,11 +1,8 @@
 import styled from '@emotion/styled'
 
-import { Heading } from '@/components/atoms/text/Heading'
-
-export const WorksPagination = ({ height }: { height: string }) => {
+export const WorksPagination = () => {
   return (
-    <_Pagination height={height}>
-      <Heading fontSize="45px">Works</Heading>
+    <_Pagination>
       <_PageList>
         <_PageListItems>01</_PageListItems>
         <_VerticalLine />
@@ -17,10 +14,9 @@ export const WorksPagination = ({ height }: { height: string }) => {
   )
 }
 
-const _Pagination = styled.div<{ height: string }>`
+const _Pagination = styled.div`
   display: flex;
   width: fit-content;
-  height: ${(props) => props.height};
   flex-direction: column;
   align-items: center;
   justify-content: center;

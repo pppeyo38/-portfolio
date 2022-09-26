@@ -1,8 +1,8 @@
+import { calc } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { use100vh } from 'react-div-100vh'
-import StickyBox from 'react-sticky-box'
 
 import iromemoImg from '/public/work/16memo.jpg'
 import geikousaiImg from '/public/work/geikosaiPre.jpg'
@@ -49,53 +49,17 @@ export const Work = ({ workRef, scrollY }: Props) => {
   return (
     <>
       {height && (
-        // <_Section ref={workRef}>
-        //   <_ScrollArea height={height ? `${height * 4}px` : '100vh'}>
-        //     <_WrapperIromemo
-        //       height={height ? `${height}px` : '100vh'}
-        //       isFix={height <= scrollY && scrollY < height * 2}
-        //       isView={isIromemoView}
-        //     >
-        //       <Heading fontSize="45px">Works</Heading>
-        //       <_ImgInner>
-        //         <img src={iromemoImg.src} alt="16memo" />
-        //       </_ImgInner>
-        //     </_WrapperIromemo>
-        //     <_WrapperGeiko
-        //       height={height ? `${height}px` : '100vh'}
-        //       isFix={height * 2 <= scrollY && scrollY < height * 3}
-        //       isView={isGeikosaiView}
-        //     >
-        //       <Heading fontSize="45px">Works</Heading>
-        //       <_ImgInner>
-        //         <img src={geikousaiImg.src} alt="geikousai pre" />
-        //       </_ImgInner>
-        //     </_WrapperGeiko>
-        //     <_WrapperARest
-        //       height={height ? `${height}px` : '100vh'}
-        //       isFix={height * 3 <= scrollY && scrollY < height * 4}
-        //       isView={isARestView}
-        //     >
-        //       <Heading fontSize="45px">Works</Heading>
-        //       <_ImgInner>
-        //         <img src={arestImg.src} alt="A Rest" />
-        //       </_ImgInner>
-        //     </_WrapperARest>
-        //     <_WorkSticky
-        //       height={height ? `${height}px` : '100vh'}
-        //       isView={height * 4 <= scrollY}
-        //     >
-        //       <_ImgInner>
-        //         <img src={arestImg.src} alt="A Rest" />
-        //       </_ImgInner>
-        //     </_WorkSticky>
-        //   </_ScrollArea>
-        // </_Section>
         <_Section ref={workRef}>
           <_ScrollArea height={height ? `${height * 4}px` : '100vh'}>
             <_StickyHeading isFix={height <= scrollY && scrollY <= height * 4}>
               <Heading fontSize="45px">Works</Heading>
             </_StickyHeading>
+            <_StickyPagination
+              isFix={height <= scrollY && scrollY <= height * 4}
+              top={height <= scrollY && scrollY <= height * 4 ? '50%' : '12.5%'}
+            >
+              <WorksPagination />
+            </_StickyPagination>
             <_WrapperIromemo
               height={height ? `${height}px` : '100vh'}
               isFix={height <= scrollY && scrollY < height * 2}
@@ -130,6 +94,9 @@ export const Work = ({ workRef, scrollY }: Props) => {
               <_StickyHeading isFix={false}>
                 <Heading fontSize="45px">Works</Heading>
               </_StickyHeading>
+              <_StickyPagination isFix={false}>
+                <WorksPagination />
+              </_StickyPagination>
               <_ImgInner>
                 <img src={arestImg.src} alt="A Rest" />
               </_ImgInner>
@@ -155,6 +122,13 @@ const _StickyHeading = styled.div<{ isFix: boolean }>`
   top: 60px;
   left: 50%;
   transform: translate(-50%, 0);
+`
+
+const _StickyPagination = styled.div<{ isFix: boolean; top?: string }>`
+  position: ${(props) => (props.isFix ? 'fixed' : 'absolute')};
+  top: ${(props) => (props.top ? props.top : '50%')};
+  left: 7%;
+  transform: translate(0, -50%);
 `
 
 const _WrapperIromemo = styled.div<{
