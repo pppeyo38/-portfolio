@@ -2,13 +2,11 @@ import styled from '@emotion/styled'
 import { useState, useEffect } from 'react'
 import { use100vh } from 'react-div-100vh'
 
-import { TopWorkImage } from '@/components/molecules/link/TopWorkImage'
 import { Heading } from '@/components/atoms/text/Heading'
 import { WorksPagination } from '@/components/molecules/WorksPagination'
+import { TopWorkImage } from '@/components/molecules/link/TopWorkImage'
 
-import iromemoImg from '/public/work/16memo.jpg'
-import geikousaiImg from '/public/work/geikosaiPre.jpg'
-import arestImg from '/public/work/ARest.jpg'
+import imgData from '@/data/top/topWorkImg.json'
 
 type Props = {
   workRef: (node?: Element | null | undefined) => void
@@ -17,16 +15,7 @@ type Props = {
 
 export const Work = ({ workRef, scrollY }: Props) => {
   const height = use100vh()
-
-  const imgData = [
-    { imgPath: iromemoImg, imgAlt: '16memo' },
-    { imgPath: geikousaiImg, imgAlt: '芸工祭2022 プレサイト' },
-    { imgPath: arestImg, imgAlt: 'A Rest' },
-  ]
-
   const [dataIndex, setDataIndex] = useState(0)
-
-  console.log(scrollY)
 
   useEffect(() => {
     if (!height) return
@@ -43,7 +32,10 @@ export const Work = ({ workRef, scrollY }: Props) => {
     <>
       {height && (
         <_Section ref={workRef} height={`${height * 4}px`}>
-          <_SectionInner isFixed={height <= scrollY && scrollY < height * 4}>
+          <_SectionInner
+            isFixed={height <= scrollY && scrollY < height * 4}
+            height={`${height}px`}
+          >
             <Heading fontSize="45px">Works</Heading>
             <_Content>
               <_PaginationWrap>
@@ -52,6 +44,7 @@ export const Work = ({ workRef, scrollY }: Props) => {
               <TopWorkImage
                 imgPath={imgData[dataIndex].imgPath}
                 imgAlt={imgData[dataIndex].imgAlt}
+                route={imgData[dataIndex].route}
               />
             </_Content>
           </_SectionInner>
@@ -64,6 +57,7 @@ export const Work = ({ workRef, scrollY }: Props) => {
               <TopWorkImage
                 imgPath={imgData[2].imgPath}
                 imgAlt={imgData[2].imgAlt}
+                route={imgData[2].route}
               />
             </_Content>
           </_StickyBottom>
@@ -74,22 +68,22 @@ export const Work = ({ workRef, scrollY }: Props) => {
 }
 
 const _Section = styled.section<{ height: string }>`
+  position: relative;
   width: 100vw;
   height: ${(props) => props.height};
-  position: relative;
 `
 
-const _SectionInner = styled.div<{ isFixed: boolean }>`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  width: 100%;
-  height: 100vh;
+const _SectionInner = styled.div<{ isFixed: boolean; height: string }>`
   position: ${(props) => (props.isFixed ? 'fixed;' : 'absolute')};
   top: 0;
   left: 0;
+  display: flex;
+  width: 100%;
+  height: ${(props) => props.height};
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
 `
 
 const _Content = styled.div`
@@ -104,14 +98,14 @@ const _PaginationWrap = styled.div`
 `
 
 const _StickyBottom = styled.div<{ isView: boolean; height: string }>`
-  display: ${(props) => (props.isView ? 'flex' : 'none')};
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  width: 100%;
-  height: ${(props) => props.height};
   position: absolute;
   bottom: 0;
   left: 0;
+  display: ${(props) => (props.isView ? 'flex' : 'none')};
+  width: 100%;
+  height: ${(props) => props.height};
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
 `

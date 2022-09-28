@@ -1,19 +1,18 @@
 import styled from '@emotion/styled'
-import { StaticImageData } from 'next/image'
+import Link from 'next/link'
 
 import { WorkImage } from '@/components/atoms/WorkImage'
 
 type Props = {
-  imgPath: StaticImageData
+  imgPath: string
   imgAlt: string
+  route: string
 }
 
-export const TopWorkImage = ({ imgPath, imgAlt }: Props) => {
+export const TopWorkImage = ({ imgPath, imgAlt, route }: Props) => {
   return (
-    <_Hover>
+    <div>
       <WorkImage imgPath={imgPath} imgAlt={imgAlt} />
-    </_Hover>
+    </div>
   )
 }
-
-const _Hover = styled.div``

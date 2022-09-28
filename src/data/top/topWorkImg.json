@@ -1,0 +1,13 @@
+[
+  {
+    "imgPath": "/work/16memo.jpg",
+    "imgAlt": "16memo",
+    "route": "16memo"
+  },
+  {
+    "imgPath": "/work/geikosaiPre.jpg",
+    "imgAlt": "芸工祭2022 プレサイト",
+    "route": "geikousai2022-pre"
+  },
+  { "imgPath": "/work/ARest.jpg", "imgAlt": "A Rest", "route": "arest" }
+]
