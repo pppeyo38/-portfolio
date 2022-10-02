@@ -76,12 +76,12 @@ const _VerticalLine1to2 = styled.span<{ progress: string }>`
 
   &:after {
     position: absolute;
-    content: '';
     top: 0;
     left: 0;
     width: 0.7px;
     height: ${(props) => props.progress};
     background-color: ${({ theme }) => theme.colors.gray};
+    content: '';
   }
 `
 
@@ -94,11 +94,11 @@ const _VerticalLine2to3 = styled.span<{ progress: string }>`
 
   &:after {
     position: absolute;
-    content: '';
     top: 0;
     left: 0;
     width: 0.7px;
     height: ${(props) => props.progress};
     background-color: ${({ theme }) => theme.colors.gray};
+    content: '';
   }
 `
