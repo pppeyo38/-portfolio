@@ -19,5 +19,6 @@ module.exports = {
     'color-function-notation': [null],
     'declaration-empty-line-before': [null],
     'length-zero-no-unit': [null],
+    'selector-pseudo-element-colon-notation': [null],
   },
 }

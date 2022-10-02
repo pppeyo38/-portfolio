@@ -16,17 +16,29 @@ type Props = {
 export const Work = ({ workRef, scrollY }: Props) => {
   const height = use100vh()
   const [dataIndex, setDataIndex] = useState(0)
+  const [progress1to2, setProgress1to2] = useState<number>(0)
+  const [progress2to3, setProgress2to3] = useState<number>(0)
 
   useEffect(() => {
     if (!height) return
-    if (scrollY < height || scrollY <= height * 2) {
+    if (scrollY < height) {
       setDataIndex(0)
-    } else if (height * 2 < scrollY && scrollY < height * 3) {
+      setProgress1to2(0)
+      setProgress2to3(0)
+    } else if (height <= scrollY && scrollY < height * 2) {
+      setDataIndex(0)
+      setProgress1to2(Math.round(((scrollY - height) / height) * 100))
+      setProgress2to3(0)
+    } else if (height * 2 <= scrollY && scrollY < height * 3) {
       setDataIndex(1)
-    } else if (height * 3 < scrollY && scrollY < height * 4) {
+      setProgress1to2(100)
+      setProgress2to3(Math.round(((scrollY - height * 2) / height) * 100))
+    } else if (height * 3 <= scrollY) {
       setDataIndex(2)
+      setProgress1to2(100)
+      setProgress2to3(100)
     }
-  }, [scrollY])
+  }, [scrollY, height])
 
   return (
     <>
@@ -39,7 +51,11 @@ export const Work = ({ workRef, scrollY }: Props) => {
             <Heading fontSize="45px">Works</Heading>
             <_Content>
               <_PaginationWrap>
-                <WorksPagination />
+                <WorksPagination
+                  dataIndex={dataIndex}
+                  progress1to2={progress1to2}
+                  progress2to3={progress2to3}
+                />
               </_PaginationWrap>
               <TopWorkImage
                 imgPath={imgData[dataIndex].imgPath}
@@ -52,7 +68,11 @@ export const Work = ({ workRef, scrollY }: Props) => {
             <Heading fontSize="45px">Works</Heading>
             <_Content>
               <_PaginationWrap>
-                <WorksPagination />
+                <WorksPagination
+                  dataIndex={dataIndex}
+                  progress1to2={progress1to2}
+                  progress2to3={progress2to3}
+                />
               </_PaginationWrap>
               <TopWorkImage
                 imgPath={imgData[2].imgPath}
