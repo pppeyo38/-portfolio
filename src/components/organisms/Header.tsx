@@ -1,17 +1,14 @@
-import { Modal, ModalContent, useDisclosure } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import { use100vh } from 'react-div-100vh'
 
+import { NavModal } from './NavModal'
 import { HamburgerBtn } from '@/components/atoms/buttons/HamburgerBtn'
 import { HeaderTitle } from '@/components/molecules/link/HeaderTitle'
-import { NavList } from '@/components/molecules/link/NavList'
 
 export const Header = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const height = use100vh()
-  const [isTItle, setIsTitle] = useState(true)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isTItle, setIsTitle] = useState<boolean>(true)
   const router = useRouter()
 
   useEffect(() => {
@@ -20,10 +17,11 @@ export const Header = () => {
     } else {
       setIsTitle(false)
     }
+    setIsOpen(false)
   }, [router.route])
 
   const toogleIcon = () => {
-    isOpen ? onClose() : onOpen()
+    setIsOpen(!isOpen)
   }
 
   return (
@@ -35,14 +33,7 @@ export const Header = () => {
         </_HeaderInner>
       </_Header>
 
-      <Modal onClose={onClose} size="full" isOpen={isOpen}>
-        <ModalContent alignItems="center">
-          <_ContentInner height={height ? `${height}px` : '100vh'}>
-            <HeaderTitle isView fontSize="66px" />
-            <NavList onClick={toogleIcon} />
-          </_ContentInner>
-        </ModalContent>
-      </Modal>
+      <NavModal isOpen={isOpen} />
     </>
   )
 }
@@ -62,12 +53,4 @@ const _HeaderInner = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 14px auto;
-`
-
-const _ContentInner = styled.div<{ height: string }>`
-  display: grid;
-  max-width: 680px;
-  height: ${(props) => props.height};
-  align-items: center;
-  grid-template-columns: 1fr 1fr;
 `

@@ -5,16 +5,12 @@ import { useRouter } from 'next/router'
 import { GithubIcon } from '@/components/atoms/icons/GithubIcon'
 import { TwitterIcon } from '@/components/atoms/icons/TwitterIcon'
 
-type Props = {
-  onClick: () => void
-}
-
-export const NavList = ({ onClick }: Props) => {
+export const NavList = () => {
   const router = useRouter()
 
   return (
     <_NavList>
-      <ul onClick={onClick}>
+      <ul>
         <_NavItem isNowPos={router.route === '/'}>
           <Link href="/">Top</Link>
         </_NavItem>
