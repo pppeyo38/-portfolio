@@ -4,8 +4,6 @@ export type worksListContent = {
   route: string
   product: string
   role: string
-  repository: string
-  repository2?: string
 }
 
 export type worksListProps = {
