@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 
+import Image from 'next/image'
 import { Heading } from '@/components/atoms/text/Heading'
 import { DetailContentsBlock } from '@/components/organisms/works/DetailContentsBlock'
 import { IntroductionBlock } from '@/components/organisms/works/IntroductionBlock'
@@ -18,9 +19,9 @@ export const WorkLayout = (props: workPageProps) => {
         <_WorkTitle>{workTitle}</_WorkTitle>
       </_WorkTitleWrap>
       <_Container>
-        <figure>
-          <img src={images[0].path} alt={images[0].alt} />
-        </figure>
+        <_Figure>
+          <Image src={images[0].path} alt={images[0].alt} layout="fill" />
+        </_Figure>
         <IntroductionBlock {...introduction} />
         <DetailContentsBlock detail={detail} />
       </_Container>
@@ -51,4 +52,10 @@ const _WorkTitle = styled.h2`
 const _Container = styled.div`
   max-width: 880px;
   margin: 0 auto 50px;
+`
+
+const _Figure = styled.figure`
+  position: relative;
+  width: 880px;
+  height: 544px;
 `

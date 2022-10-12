@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Image from 'next/image'
 import Link from 'next/link'
 
 type Props = {
@@ -12,7 +13,7 @@ export const TopWorkImage = ({ imgPath, imgAlt, route }: Props) => {
     <Link href={`/works/${route}`}>
       <_A>
         <_ImgWrap>
-          <_Image src={imgPath} alt={imgAlt} />
+          <_Image src={imgPath} alt={imgAlt} width={800} height={494} />
         </_ImgWrap>
       </_A>
     </Link>
@@ -28,10 +29,9 @@ const _A = styled.a`
 const _ImgWrap = styled.figure`
   position: relative;
   overflow: hidden;
-  max-width: 800px;
 `
 
-const _Image = styled.img`
+const _Image = styled(Image)`
   transition: 0.8s;
   ${_A}:hover & {
     transform: scale(1.03);

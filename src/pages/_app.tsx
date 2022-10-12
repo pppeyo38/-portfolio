@@ -20,6 +20,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           a {
             text-decoration: none;
           }
+          button {
+            border: none;
+            background: none;
+          }
         `}
       />
       <main>

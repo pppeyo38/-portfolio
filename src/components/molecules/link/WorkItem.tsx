@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { CategoryTag } from '@/components/atoms/text/CategoryTag'
@@ -14,7 +15,7 @@ export const WorkItem = (props: worksListContent) => {
     <Link href={`/works/${route}`}>
       <_A>
         <_ImgWrap>
-          <_Image src={img} alt={title} />
+          <_Image src={img} alt={title} layout="fill" />
         </_ImgWrap>
         <_TagWrap>
           <CategoryTag>{product}</CategoryTag>
@@ -36,11 +37,13 @@ const _A = styled.a`
 
 const _ImgWrap = styled.figure`
   position: relative;
+  width: 323px;
+  height: 200px;
   overflow: hidden;
   margin-bottom: 15px;
 `
 
-const _Image = styled.img`
+const _Image = styled(Image)`
   transition: 0.8s;
   ${_A}:hover & {
     transform: scale(1.08);
