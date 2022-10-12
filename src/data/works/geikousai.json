@@ -10,7 +10,8 @@
     "text": "名古屋市立大学 芸工祭2022の告知サイトです。",
     "period": "2022.06",
     "usedLanguage": "React, TypeScript",
-    "role": "Frontend"
+    "role": "Frontend",
+    "repository": "github.com/pppeyo38/geikousai2022-pre"
   },
   "detail": [
     {

@@ -10,7 +10,8 @@
     "text": "CS50の最終課題にて制作した、カフェ訪問記録Webアプリです。",
     "period": "2022.02~03",
     "usedLanguage": "Ruby on Rails",
-    "role": "Design/Frontend/Backend"
+    "role": "Design/Frontend/Backend",
+    "repository": "github.com/pppeyo38/FinalProject"
   },
   "detail": [
     {
