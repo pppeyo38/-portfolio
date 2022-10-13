@@ -38,9 +38,9 @@ const _A = styled.a`
 const _ImgWrap = styled.figure`
   position: relative;
   overflow: hidden;
-  width: 323px;
-  height: 200px;
+  width: 100%;
   margin-bottom: 15px;
+  aspect-ratio: 1.618 / 1;
 `
 
 const _Image = styled(Image)`

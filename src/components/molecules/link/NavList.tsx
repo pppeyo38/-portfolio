@@ -54,8 +54,8 @@ const _NavItem = styled.li`
 const _A = styled.a<{ isNowPos: boolean }>`
   color: ${(props) =>
     props.isNowPos ? props.theme.colors.black : props.theme.colors.lightGray};
-  transition: all 0.4s;
   cursor: pointer;
+  transition: all 0.4s;
 
   &:hover {
     color: ${({ theme }) => theme.colors.black};

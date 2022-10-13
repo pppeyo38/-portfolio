@@ -25,7 +25,7 @@ const _Works = styled.section<{ emptyDiv: boolean }>`
   margin: 0 auto;
 
   @media (max-width: 960px) {
-    max-width: 800px;
+    max-width: 520px;
     justify-content: space-between;
   }
 
@@ -44,7 +44,7 @@ const _ItemWrapper = styled.div`
   margin-bottom: 40px;
 
   @media (max-width: 960px) {
-    width: calc(50% - 40px);
+    width: calc(50% - 20px);
   }
 
   @media (max-width: 520px) {
