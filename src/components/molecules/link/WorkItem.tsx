@@ -37,9 +37,9 @@ const _A = styled.a`
 
 const _ImgWrap = styled.figure`
   position: relative;
+  overflow: hidden;
   width: 323px;
   height: 200px;
-  overflow: hidden;
   margin-bottom: 15px;
 `
 

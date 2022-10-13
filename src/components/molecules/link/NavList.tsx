@@ -11,14 +11,20 @@ export const NavList = () => {
   return (
     <_NavList>
       <ul>
-        <_NavItem isNowPos={router.route === '/'}>
-          <Link href="/">Top</Link>
+        <_NavItem>
+          <Link href="/">
+            <_A isNowPos={router.route === '/'}>Top</_A>
+          </Link>
         </_NavItem>
-        <_NavItem isNowPos={router.route.includes('/works')}>
-          <Link href="/works">Works</Link>
+        <_NavItem>
+          <Link href="/works">
+            <_A isNowPos={router.route === '/works'}>Works</_A>
+          </Link>
         </_NavItem>
-        <_NavItem isNowPos={router.route === '/profile'}>
-          <Link href="/profile">Profile</Link>
+        <_NavItem>
+          <Link href="/profile">
+            <_A isNowPos={router.route === '/profile'}>Profile</_A>
+          </Link>
         </_NavItem>
         <_SnsItem>
           <TwitterIcon />
@@ -35,17 +41,21 @@ const _NavList = styled.div`
   align-items: center;
 `
 
-const _NavItem = styled.li<{ isNowPos: boolean }>`
+const _NavItem = styled.li`
   margin-bottom: 20px;
-  color: ${(props) =>
-    props.isNowPos ? props.theme.colors.black : props.theme.colors.lightGray};
   font-family: ${({ theme }) => theme.fonts.BVP};
   font-size: 38px;
   font-style: italic;
   font-weight: ${({ theme }) => theme.fontWt.Thin};
   letter-spacing: 1.6px;
   line-height: 1.25;
+`
+
+const _A = styled.a<{ isNowPos: boolean }>`
+  color: ${(props) =>
+    props.isNowPos ? props.theme.colors.black : props.theme.colors.lightGray};
   transition: all 0.4s;
+  cursor: pointer;
 
   &:hover {
     color: ${({ theme }) => theme.colors.black};
