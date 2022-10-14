@@ -61,5 +61,6 @@ const _Introduction = styled.div`
 `
 
 const _RepositoryLink = styled.a`
+  color: ${({ theme }) => theme.colors.black};
   text-decoration: underline ${({ theme }) => theme.colors.black};
 `
