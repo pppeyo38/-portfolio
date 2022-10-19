@@ -12,7 +12,7 @@ type Props = {
 export const WorkDetail = ({ theme, children }: Props) => {
   return (
     <_WorkDetail>
-      <Heading fontSize="32px">{theme}</Heading>
+      <_Heading>{theme}</_Heading>
       <TextJp fontSize="16px">{children}</TextJp>
     </_WorkDetail>
   )
@@ -25,4 +25,8 @@ const _WorkDetail = styled.div`
     color: ${({ theme }) => theme.colors.gray};
     text-align: start;
   }
+`
+
+const _Heading = styled(Heading)`
+  font: 32px;
 `

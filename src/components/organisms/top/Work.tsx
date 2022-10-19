@@ -48,7 +48,7 @@ export const Work = ({ workRef, scrollY }: Props) => {
             isFixed={height <= scrollY && scrollY < height * 4}
             height={`${height}px`}
           >
-            <Heading fontSize="45px">Works</Heading>
+            <Heading>Works</Heading>
             <_Content>
               <_PaginationWrap>
                 <WorksPagination
@@ -65,7 +65,7 @@ export const Work = ({ workRef, scrollY }: Props) => {
             </_Content>
           </_SectionInner>
           <_StickyBottom isView={height * 4 <= scrollY} height={`${height}px`}>
-            <Heading fontSize="45px">Works</Heading>
+            <Heading>Works</Heading>
             <_Content>
               <_PaginationWrap>
                 <WorksPagination
