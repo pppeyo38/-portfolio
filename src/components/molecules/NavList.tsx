@@ -2,14 +2,18 @@ import styled from '@emotion/styled'
 import Link from 'next/link'
 
 export const NavList = () => {
-  const navList = ['Top', 'Works', 'Profile']
+  const navList = [
+    { nav: 'Top', path: '' },
+    { nav: 'Works', path: 'works' },
+    { nav: 'Profile', path: 'profile' },
+  ]
 
   return (
     <_NavList>
       {navList.map((item, index) => (
         <li key={index}>
-          <Link href={`/${item}`}>
-            <_Item>{item}</_Item>
+          <Link href={`/${item.path}`}>
+            <_Item>{item.nav}</_Item>
           </Link>
         </li>
       ))}
