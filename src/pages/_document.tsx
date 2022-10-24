@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <meta name="description" content="ぺよのポートフォリオサイト" />
-          <link rel="icon" href="/favicon.png" />
+          <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
