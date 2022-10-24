@@ -9,7 +9,7 @@ const aRest: NextPage = () => {
   return (
     <>
       <Head>
-        <title>A Rest | Works | Peyo Log!</title>
+        <title>A Rest | Works | PEYO LOG!</title>
       </Head>
 
       <WorkLayout {...aRestData} />

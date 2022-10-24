@@ -9,7 +9,7 @@ const geikousai: NextPage = () => {
   return (
     <>
       <Head>
-        <title>芸工祭2022プレサイト | Works | Peyo Log!</title>
+        <title>芸工祭2022プレサイト | Works | PEYO LOG!</title>
       </Head>
 
       <WorkLayout {...geikousaiData} />

@@ -9,7 +9,7 @@ const iromemo: NextPage = () => {
   return (
     <>
       <Head>
-        <title>16memo | Works | Peyo Log!</title>
+        <title>16memo | Works | PEYO LOG!</title>
       </Head>
 
       <WorkLayout {...iromemoData} />

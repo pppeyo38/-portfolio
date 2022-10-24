@@ -10,7 +10,7 @@ const Works: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Works | Peyo Log!</title>
+        <title>Works | PEYO LOG!</title>
       </Head>
 
       <LowpageLayout heading="Works">

@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Peyo Log!</title>
+        <title>PEYO LOG!</title>
       </Head>
 
       <HomeLayout />
