@@ -13,9 +13,7 @@ export const WorkLayout = (props: workPageProps) => {
   return (
     <_Page>
       <_WorkTitleWrap>
-        <Heading fontSize="16px" isSub>
-          Works
-        </Heading>
+        <_SubHeading>Works</_SubHeading>
         <_WorkTitle>{workTitle}</_WorkTitle>
       </_WorkTitleWrap>
       <_Container>
@@ -37,6 +35,11 @@ const _WorkTitleWrap = styled.div`
   width: fit-content;
   margin: 0 auto 50px;
   text-align: center;
+`
+
+const _SubHeading = styled(Heading)`
+  color: ${({ theme }) => theme.colors.gray};
+  font-size: 16px;
 `
 
 const _WorkTitle = styled.h2`

@@ -10,7 +10,7 @@ export const Profile = () => {
   const height = use100vh()
   return (
     <_Section height={height ? `${height}px` : '100vh'}>
-      <Heading fontSize="45px">Profile</Heading>
+      <Heading>Profile</Heading>
       <_ContentInner>
         <MyProfileBlock>
           <TextJp fontSize="16px">
