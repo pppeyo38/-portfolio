@@ -1,19 +1,19 @@
 export const theme = {
   colors: {
-    black: '#111012',
-    gray: '#5D5C60',
-    lightGray: '#C4C4CC',
-    white: '#FAFAFC',
-    purple: '#6667AB',
+    black: '#414A53',
+    gray: '#718096',
+    white: '#FFFFFF',
+    subWhite: '#F1EFFC',
+    purple: '#7966FE',
   },
   fonts: {
-    BVP: `'Be Vietnam Pro', 'sans-serif'`,
     ZKGothic: `'Zen Kaku Gothic New', 'sans-serif'`,
+    Inter: `'Inter', sans-serif`,
   },
   fontWt: {
-    Thin: 100,
-    Light: 300,
     Regular: 400,
+    Medium: 500,
     Bold: 700,
+    ExtraBold: 800,
   },
 }

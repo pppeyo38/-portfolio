@@ -11,19 +11,19 @@ declare module '@emotion/react' {
 interface Colors {
   black: string
   gray: string
-  lightGray: string
   white: string
+  subWhite: string
   purple: string
 }
 
 interface Fonts {
-  BVP: string
   ZKGothic: string
+  Inter: string
 }
 
 interface FontWt {
-  Thin: number
-  Light: number
   Regular: number
+  Medium: number
   Bold: number
+  ExtraBold: number
 }

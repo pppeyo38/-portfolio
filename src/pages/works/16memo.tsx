@@ -1,8 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { WorkLayout } from '@/components/templates/WorkLayout'
-
 import iromemoData from '@/data/works/iromemo.json'
 
 const iromemo: NextPage = () => {
@@ -11,8 +9,6 @@ const iromemo: NextPage = () => {
       <Head>
         <title>16memo | Works | PEYO LOG!</title>
       </Head>
-
-      <WorkLayout {...iromemoData} />
     </>
   )
 }

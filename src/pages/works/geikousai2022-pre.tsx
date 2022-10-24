@@ -1,8 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { WorkLayout } from '@/components/templates/WorkLayout'
-
 import geikousaiData from '@/data/works/geikousai.json'
 
 const geikousai: NextPage = () => {
@@ -11,8 +9,6 @@ const geikousai: NextPage = () => {
       <Head>
         <title>芸工祭2022プレサイト | Works | PEYO LOG!</title>
       </Head>
-
-      <WorkLayout {...geikousaiData} />
     </>
   )
 }
