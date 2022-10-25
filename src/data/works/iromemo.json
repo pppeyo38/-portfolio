@@ -1,5 +1,5 @@
 {
-  "images": { "path": "/work/16memo.jpg", "alt": "16memo" },
+  "image": { "path": "/work/16memo.jpg", "alt": "16memo" },
   "color": "linear-gradient(329.11deg, #00A8A6 0%, #79C8C0 100%)",
   "title": "16memo",
   "abstract": "推し色をメモとして管理するWebアプリ",

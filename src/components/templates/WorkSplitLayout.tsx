@@ -1,24 +1,25 @@
 import styled from '@emotion/styled'
 import { use100vh } from 'react-div-100vh'
 import { TextArea } from '@/components/molecules/TextArea'
+import { WorkPageProps } from '@/types/workTypes'
 
-type Props = {
-  bgColor: string
-}
-
-export const WorkSplitLayout = ({ bgColor }: Props) => {
+export const WorkSplitLayout = (props: WorkPageProps) => {
+  const { image, color, title, abstract, content } = props
   const height = use100vh()
+
   return (
     <_DisplayWrap height={height ? `${height}px` : '100vh'}>
-      <_SectionLeft bgColor={bgColor}></_SectionLeft>
+      <_SectionLeft bgColor={color}></_SectionLeft>
       <_SectionRight>
-        <TextArea heading="Period">2020 October</TextArea>
-        <TextArea heading="Concept">
-          テキストテキストテキストテキストテキスト
-        </TextArea>
-        <TextArea heading="Technology">React, TypeScript</TextArea>
+        <TextArea heading="Period">{content.period}</TextArea>
+        <TextArea heading="Concept">{content.concept}</TextArea>
+        <TextArea heading="Technology">{content.technology}</TextArea>
         <TextArea heading="Repository">
-          <span>ripository</span>
+          {content.repository.map((item, index) => (
+            <_Link key={index} href={item}>
+              {item}
+            </_Link>
+          ))}
         </TextArea>
       </_SectionRight>
     </_DisplayWrap>
@@ -44,4 +45,9 @@ const _SectionRight = styled.section`
   padding: 4%;
   margin-top: 4.5rem;
   gap: 42px;
+`
+
+const _Link = styled.a`
+  display: block;
+  color: #9eb7ff;
 `

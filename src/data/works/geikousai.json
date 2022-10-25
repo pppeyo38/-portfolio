@@ -1,5 +1,5 @@
 {
-  "images": { "path": "/work/geikosaiPre.jpg", "alt": "芸工祭2022告知サイト" },
+  "image": { "path": "/work/geikosaiPre.jpg", "alt": "芸工祭2022告知サイト" },
   "color": "linear-gradient(329.11deg, #00A8A6 0%, #79C8C0 100%)",
   "title": "芸工祭2022 告知サイト",
   "abstract": "名古屋市立大学芸術工学部の学園祭、芸工祭2022の告知サイト",

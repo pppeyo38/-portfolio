@@ -18,7 +18,7 @@ export const TextArea = ({ heading, children }: Props) => {
 }
 
 const _Wrapper = styled.div`
-  * + * {
-    margin-top: 16px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `

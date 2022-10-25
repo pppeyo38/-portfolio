@@ -14,4 +14,6 @@ const _P = styled.p`
   font-family: ${({ theme }) => theme.fonts.ZKGothic};
   font-size: 16px;
   font-weight: ${({ theme }) => theme.fontWt.Regular};
+  letter-spacing: 0.02em;
+  line-height: 1.75;
 `
