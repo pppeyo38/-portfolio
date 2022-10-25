@@ -24,6 +24,7 @@ interface Fonts {
 interface FontWt {
   Regular: number
   Medium: number
+  SemiBold: number
   Bold: number
   ExtraBold: number
 }

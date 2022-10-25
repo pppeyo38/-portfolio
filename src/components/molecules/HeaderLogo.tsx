@@ -8,7 +8,7 @@ export const HeaderLogo = () => {
     <Link href="/">
       <_A>
         <LogoIcon width={32} height={32} />
-        <Title fontSize="24px">PEYO LOG!</Title>
+        <Title fontSize="22px">PEYO LOG</Title>
       </_A>
     </Link>
   )

@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         styles={css`
           ${emotionReset}
           body {
-            background-color: #fafafc;
+            background-color: #fff;
           }
           li {
             list-style: none;
