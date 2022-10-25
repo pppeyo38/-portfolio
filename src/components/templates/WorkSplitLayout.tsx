@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { use100vh } from 'react-div-100vh'
+import { Heading } from '@/components/atoms/text/Heading'
 import { TextArea } from '@/components/molecules/TextArea'
 import { WorkPageProps } from '@/types/workTypes'
 
@@ -14,13 +15,14 @@ export const WorkSplitLayout = (props: WorkPageProps) => {
         <TextArea heading="Period">{content.period}</TextArea>
         <TextArea heading="Concept">{content.concept}</TextArea>
         <TextArea heading="Technology">{content.technology}</TextArea>
-        <TextArea heading="Repository">
+        <_LinkArea>
+          <Heading fontSize="24px">Repository</Heading>
           {content.repository.map((item, index) => (
             <_Link key={index} href={item}>
               {item}
             </_Link>
           ))}
-        </TextArea>
+        </_LinkArea>
       </_SectionRight>
     </_DisplayWrap>
   )
@@ -42,12 +44,20 @@ const _SectionRight = styled.section`
   display: flex;
   width: calc(50% - 8%);
   flex-direction: column;
-  padding: 4%;
+  padding: 2% 4% 4%;
   margin-top: 4.5rem;
   gap: 42px;
+`
+const _LinkArea = styled.div`
+  h2 {
+    margin-bottom: 16px;
+  }
 `
 
 const _Link = styled.a`
   display: block;
-  color: #9eb7ff;
+  color: #4d79ff;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: underline;
 `
