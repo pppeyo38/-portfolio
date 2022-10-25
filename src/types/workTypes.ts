@@ -10,26 +10,20 @@ export type WorksListProps = {
   worksList: WorksListContent[]
 }
 
-export type WorkIntroduction = {
-  text: string
+export type WorkContent = {
   period: string
+  concept: string
   technology: string
-  role: string
-  repository: string
-  repository2?: string
-}
-
-export type WorkDetailContent = {
-  theme: string
-  text: string
+  repository: string[]
 }
 
 export type WorkPageProps = {
-  images: {
+  image: {
     path: string
     alt: string
-  }[]
-  workTitle: string
-  introduction: WorkIntroduction
-  detail: WorkDetailContent[]
+  }
+  color: string
+  title: string
+  abstract: string
+  content: WorkContent
 }
