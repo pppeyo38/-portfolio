@@ -13,7 +13,7 @@ export type WorksListProps = {
 export type WorkIntroduction = {
   text: string
   period: string
-  usedLanguage: string
+  technology: string
   role: string
   repository: string
   repository2?: string
