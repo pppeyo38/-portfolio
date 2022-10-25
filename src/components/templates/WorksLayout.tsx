@@ -1,10 +1,16 @@
 import styled from '@emotion/styled'
+import { ReactNode } from 'react'
 import { Heading } from '@/components/atoms/text/Heading'
 
-export const WorksLayout = () => {
+type Props = {
+  children: ReactNode
+}
+
+export const WorksLayout = ({ children }: Props) => {
   return (
     <_DisplayWrap>
       <Heading>Works</Heading>
+      {children}
     </_DisplayWrap>
   )
 }

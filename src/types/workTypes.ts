@@ -1,4 +1,4 @@
-export type worksListContent = {
+export type WorksListContent = {
   img: string
   title: string
   route: string
@@ -6,11 +6,11 @@ export type worksListContent = {
   role: string
 }
 
-export type worksListProps = {
-  worksList: worksListContent[]
+export type WorksListProps = {
+  worksList: WorksListContent[]
 }
 
-export type workIntroduction = {
+export type WorkIntroduction = {
   text: string
   period: string
   usedLanguage: string
@@ -19,17 +19,17 @@ export type workIntroduction = {
   repository2?: string
 }
 
-export type workDetailContent = {
+export type WorkDetailContent = {
   theme: string
   text: string
 }
 
-export type workPageProps = {
+export type WorkPageProps = {
   images: {
     path: string
     alt: string
   }[]
   workTitle: string
-  introduction: workIntroduction
-  detail: workDetailContent[]
+  introduction: WorkIntroduction
+  detail: WorkDetailContent[]
 }

@@ -21,7 +21,7 @@ export const WorkCard = (props: Props) => {
   return (
     <_Card onClick={onClickCard}>
       <_Figure>
-        <Image src={`/${img}`} alt="" layout="fill" />
+        <Image src={`${img}`} alt="" layout="fill" />
       </_Figure>
       <_CradDetail>
         <_Product>{product}</_Product>
@@ -58,7 +58,7 @@ const _CradDetail = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 0 18px;
-  gap: 4px;
+  gap: 6px;
 `
 
 const _Rabel = styled.div`

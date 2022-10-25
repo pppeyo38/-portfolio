@@ -4,11 +4,11 @@
     "title": "16memo",
     "route": "16memo",
     "product": "WEB APP",
-    "role": "Backend/Frontend"
+    "role": "Backend & Frontend"
   },
   {
     "img": "/work/geikosaiPre.jpg",
-    "title": "芸工祭2022プレサイト",
+    "title": "芸工祭2022告知サイト",
     "route": "geikousai2022-pre",
     "product": "WEB SITE",
     "role": "Frontend"
@@ -18,6 +18,6 @@
     "title": "A Rest",
     "route": "arest",
     "product": "WEB APP",
-    "role": "Frontend/Backend/Design"
+    "role": "Frontend & Backend & Design"
   }
 ]
