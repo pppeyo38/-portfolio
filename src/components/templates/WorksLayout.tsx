@@ -20,5 +20,5 @@ const _DisplayWrap = styled.div`
   width: 100vw;
   flex-direction: column;
   align-items: center;
-  margin-top: 4.5rem;
+  margin-top: calc(4.5rem + 60px);
 `

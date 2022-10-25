@@ -9,7 +9,7 @@ const Works: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Works | PEYO LOG!</title>
+        <title>Works | PEYO LOG</title>
       </Head>
 
       <WorksLayout>

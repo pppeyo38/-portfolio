@@ -16,9 +16,20 @@ export const WorkCardBlock = ({ worksList }: WorksListProps) => {
 const _Wrapper = styled.section`
   display: flex;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1050px;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0 15px;
-  margin: 0 auto;
+  margin: 60px auto;
+  gap: 40px 0;
+
+  @media screen and (max-width: 1050px) {
+    max-width: 650px;
+    justify-content: space-between;
+    gap: 40px 20px;
+  }
+
+  @media screen and (max-width: 650px) {
+    max-width: 300px;
+    justify-content: center;
+  }
 `

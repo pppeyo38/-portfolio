@@ -21,7 +21,7 @@ export const WorkCard = (props: Props) => {
   return (
     <_Card onClick={onClickCard}>
       <_Figure>
-        <Image src={`${img}`} alt="" layout="fill" />
+        <_Image src={`${img}`} alt="" layout="fill" />
       </_Figure>
       <_CradDetail>
         <_Product>{product}</_Product>
@@ -41,6 +41,8 @@ const _Card = styled.div`
   height: 256px;
   border: 1px solid ${({ theme }) => theme.colors.subWhite};
   border-radius: 20px;
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 10%),
+    0px 10px 10px -5px rgba(0, 0, 0, 4%);
   cursor: pointer;
 `
 
@@ -49,6 +51,13 @@ const _Figure = styled.figure`
   width: 100%;
   height: 70%;
   background: gray;
+`
+
+const _Image = styled(Image)`
+  transition: 0.8s;
+  ${_Card}:hover & {
+    transform: scale(1.08);
+  }
 `
 
 const _CradDetail = styled.div`
@@ -81,7 +90,7 @@ const _Product = styled.span`
 const _Title = styled.h3`
   color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.fonts.Inter};
-  font-size: 18px;
+  font-size: 16px;
   font-weight: ${({ theme }) => theme.fontWt.SemiBold};
   line-height: 22px;
 `
