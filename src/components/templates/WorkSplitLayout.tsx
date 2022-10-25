@@ -7,29 +7,21 @@ import { Title } from '@/components/atoms/text/Title'
 import { TextArea } from '@/components/molecules/TextArea'
 import { WorkPageProps } from '@/types/workTypes'
 
-import GoLiveIcon from 'public/icons/goLive.svg'
-
 export const WorkSplitLayout = (props: WorkPageProps) => {
-  const { image, color, title, abstract, content } = props
+  const { image, bgColor, title, abstract, url, content } = props
   const height = use100vh()
 
   return (
     <_DisplayWrap height={height ? `${height}px` : '100vh'}>
-      <_SectionLeft bgColor={color}>
-        <Title fontSize="48px" color="#FFF">
-          {title}
-        </Title>
-        <Text color="#FFF">{abstract}</Text>
-        <Button
-          strokeColor="#3DB8B3"
-          fillColor="#FFF"
-          onClick={() => console.log('click')}
-        >
-          Go Live
-          <_BtnInner>
-            <GoLiveIcon width={16} height={16} fill="#3DB8B3" />
-          </_BtnInner>
-        </Button>
+      <_SectionLeft bgColor={bgColor}>
+        <_SectionLeftHead>
+          <_WorkHeadingWrap>
+            <Title fontSize="48px" color="#FFF">
+              {title}
+            </Title>
+            <Text color="#FFF">{abstract}</Text>
+          </_WorkHeadingWrap>
+        </_SectionLeftHead>
       </_SectionLeft>
       <_SectionRight>
         <TextArea heading="Period">{content.period}</TextArea>
@@ -44,6 +36,17 @@ export const WorkSplitLayout = (props: WorkPageProps) => {
           ))}
         </_LinkArea>
       </_SectionRight>
+      {url && (
+        <_GoLiveBtn>
+          <Button
+            strokeColor="#FFF"
+            fillColor={bgColor}
+            onClick={() => location.assign(url)}
+          >
+            Go Live
+          </Button>
+        </_GoLiveBtn>
+      )}
     </_DisplayWrap>
   )
 }
@@ -61,10 +64,16 @@ const _SectionLeft = styled.section<{ bgColor: string }>`
   background: ${(props) => props.bgColor};
 `
 
-const _BtnInner = styled.span`
-  display: inline-flex;
-  align-self: center;
-  margin-left: 10px;
+const _SectionLeftHead = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+const _WorkHeadingWrap = styled.div`
+  * + * {
+    margin-top: 4px;
+  }
 `
 
 const _SectionRight = styled.section`
@@ -87,4 +96,15 @@ const _Link = styled.a`
   font-size: 16px;
   line-height: 24px;
   text-decoration: underline;
+`
+
+const _GoLiveBtn = styled.div`
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  transition: 0.8s;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
 `

@@ -19,14 +19,16 @@ export const Button = (props: Props) => {
 
 const _Button = styled.button<{ strokeColor: string; fillColor: string }>`
   display: inline-flex;
-  height: 36px;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
   align-items: center;
-  padding: 0 36px;
-  background-color: ${(props) => props.fillColor};
-  border-radius: 200px;
+  justify-content: center;
+  background: ${(props) => props.fillColor};
+  border-radius: 50%;
   box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 10%),
     0px 10px 10px -5px rgba(0, 0, 0, 4%);
   color: ${(props) => props.strokeColor};
   cursor: pointer;
-  line-height: 1.2;
+  font-size: 18px;
 `

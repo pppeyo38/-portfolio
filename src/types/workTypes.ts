@@ -23,7 +23,9 @@ export type WorkPageProps = {
     alt: string
   }
   color: string
+  bgColor: string
   title: string
   abstract: string
+  url?: string
   content: WorkContent
 }
