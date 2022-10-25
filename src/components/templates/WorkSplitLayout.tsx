@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Image from 'next/image'
 import { use100vh } from 'react-div-100vh'
 import { Button } from '@/components/atoms/button/Button'
 import { Heading } from '@/components/atoms/text/Heading'
@@ -15,13 +16,18 @@ export const WorkSplitLayout = (props: WorkPageProps) => {
     <_DisplayWrap height={height ? `${height}px` : '100vh'}>
       <_SectionLeft bgColor={bgColor}>
         <_SectionLeftHead>
-          <_WorkHeadingWrap>
-            <Title fontSize="48px" color="#FFF">
-              {title}
-            </Title>
-            <Text color="#FFF">{abstract}</Text>
-          </_WorkHeadingWrap>
+          <Title fontSize="48px" color="#FFF">
+            {title}
+          </Title>
+          <Text color="#FFF">{abstract}</Text>
         </_SectionLeftHead>
+        <_MockUpBlock>
+          {image.map((item, index) => (
+            <_MockFigure key={index}>
+              <Image src={item.path} alt={item.alt} layout="fill" />
+            </_MockFigure>
+          ))}
+        </_MockUpBlock>
       </_SectionLeft>
       <_SectionRight>
         <TextArea heading="Period">{content.period}</TextArea>
@@ -62,17 +68,28 @@ const _SectionLeft = styled.section<{ bgColor: string }>`
   padding: 4%;
   margin-top: 4.5rem;
   background: ${(props) => props.bgColor};
+  overflow-y: hidden;
 `
 
 const _SectionLeftHead = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-
-const _WorkHeadingWrap = styled.div`
   * + * {
     margin-top: 4px;
+  }
+`
+const _MockUpBlock = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+`
+
+const _MockFigure = styled.figure`
+  position: relative;
+  width: 230px;
+  height: 466px;
+
+  @media screen and (max-width: 1200px) {
+    width: 180px;
+    height: 364.7px;
   }
 `
 
@@ -83,7 +100,9 @@ const _SectionRight = styled.section`
   padding: 4%;
   margin-top: 4.5rem;
   gap: 42px;
+  overflow-y: scroll;
 `
+
 const _LinkArea = styled.div`
   h2 {
     margin-bottom: 16px;

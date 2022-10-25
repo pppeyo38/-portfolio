@@ -1,5 +1,5 @@
 {
-  "image": { "path": "/work/ARest.jpg", "alt": "A Rest" },
+  "image": [{ "path": "/work/ARest.jpg", "alt": "A Rest" }],
   "color": "#3DB8B3",
   "bgColor": "linear-gradient(329.11deg, #0000A8 0%, #6D7ABC 100%)",
   "title": "A Rest",
