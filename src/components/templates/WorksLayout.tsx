@@ -9,7 +9,7 @@ type Props = {
 export const WorksLayout = ({ children }: Props) => {
   return (
     <_DisplayWrap>
-      <Heading>Works</Heading>
+      <Heading fontSize="48px">Works</Heading>
       {children}
     </_DisplayWrap>
   )
