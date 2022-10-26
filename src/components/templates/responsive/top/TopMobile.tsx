@@ -1,14 +1,15 @@
 import styled from '@emotion/styled'
-import { Title } from '@/components/atoms/text/Title'
+import { Introduction } from '@/components/atoms/text/Introduction'
 
 export const TopMobile = () => {
   return (
     <>
       <_SectionRight>
-        <Title color="#FFF" fontSize="48px">
-          Welcome, <br />
+        <Introduction color="#FFF">
+          Welcome,
+          <br />
           Peyo’s Portfolio!
-        </Title>
+        </Introduction>
       </_SectionRight>
       <_SectionLeft />
     </>

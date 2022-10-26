@@ -1,13 +1,17 @@
 import styled from '@emotion/styled'
-import { Title } from '@/components/atoms/text/Title'
+import { Introduction } from '@/components/atoms/text/Introduction'
 
 export const TopTablet = () => {
   return (
     <>
       <_SectionRight>
-        <Title color="#FFF" fontSize="48px">
-          Welcome, Peyo’s Portfolio!
-        </Title>
+        <Introduction color="#FFF">
+          Welcome,
+          <br />
+          Peyo’s
+          <br />
+          Portfolio!
+        </Introduction>
       </_SectionRight>
       <_SectionLeft />
     </>
@@ -22,7 +26,6 @@ const _SectionRight = styled.section`
   margin-top: 4.5rem;
 
   h1 {
-    width: 250px;
     line-height: 1.2;
   }
 `

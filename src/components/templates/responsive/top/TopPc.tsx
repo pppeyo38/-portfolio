@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
-import { Title } from '@/components/atoms/text/Title'
+import { Introduction } from '@/components/atoms/text/Introduction'
 
 export const TopPc = () => {
   return (
     <>
       <_SectionRight>
-        <Title fontSize="64px">Welcome, Peyo’s Portfolio!</Title>
+        <Introduction>Welcome, Peyo’s Portfolio!</Introduction>
       </_SectionRight>
       <_SectionLeft></_SectionLeft>
     </>

@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { Title } from '@/components/atoms/text/Title'
 import LogoIcon from 'public/icons/LogoIcon.svg'
 
 export const HeaderLogo = () => {
@@ -8,7 +7,7 @@ export const HeaderLogo = () => {
     <Link href="/">
       <_A>
         <LogoIcon width={32} height={32} />
-        <Title fontSize="22px">PEYO LOG</Title>
+        <_Title>PEYO LOG</_Title>
       </_A>
     </Link>
   )
@@ -19,4 +18,12 @@ const _A = styled.a`
   align-items: center;
   cursor: pointer;
   gap: 10px;
+`
+
+const _Title = styled.h1`
+  color: ${(props) => (props.color ? props.color : props.theme.colors.black)};
+  font-family: ${({ theme }) => theme.fonts.Inter};
+  font-size: 22px;
+  font-weight: ${({ theme }) => theme.fontWt.ExtraBold};
+  letter-spacing: 0.015em;
 `

@@ -1,30 +1,23 @@
 import styled from '@emotion/styled'
 import Image from 'next/image'
 import { use100vh } from 'react-div-100vh'
-import useMedia from 'use-media'
 import { Button } from '@/components/atoms/button/Button'
 import { Heading } from '@/components/atoms/text/Heading'
 import { Text } from '@/components/atoms/text/Text'
 import { Title } from '@/components/atoms/text/Title'
 import { TextArea } from '@/components/molecules/TextArea'
-import { mediaQueries } from '@/themes/mediaQueries'
 import { WorkPageProps } from '@/types/workTypes'
 
 export const WorkContentLayout = (props: WorkPageProps) => {
   const { image, bgColor, title, abstract, url, content } = props
   const height = use100vh()
-  const isMobile = useMedia(mediaQueries.mobile)
 
   return (
     <_DisplayWrap height={height ? `${height}px` : '100vh'}>
       <_SectionLeft bgColor={bgColor}>
         <_SectionLeftHead>
-          <Title fontSize={isMobile ? '32px' : '48px'} color="#FFF">
-            {title}
-          </Title>
-          <Text fontSize={isMobile ? '12px' : '16px'} color="#FFF">
-            {abstract}
-          </Text>
+          <Title color="#FFF">{title}</Title>
+          <Text color="#FFF">{abstract}</Text>
         </_SectionLeftHead>
         <_MockUpBlock>
           {image.map((item, index) => (
@@ -39,7 +32,7 @@ export const WorkContentLayout = (props: WorkPageProps) => {
         <TextArea heading="Concept">{content.concept}</TextArea>
         <TextArea heading="Technology">{content.technology}</TextArea>
         <_LinkArea>
-          <Heading fontSize={isMobile ? '20px' : '24px'}>Repository</Heading>
+          <Heading>Repository</Heading>
           {content.repository.map((item, index) => (
             <_Link key={index} href={item}>
               {item}

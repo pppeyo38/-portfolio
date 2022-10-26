@@ -1,9 +1,7 @@
 import styled from '@emotion/styled'
 import { ReactNode } from 'react'
-import useMedia from 'use-media'
 import { Heading } from '@/components/atoms/text/Heading'
 import { Text } from '@/components/atoms/text/Text'
-import { mediaQueries } from '@/themes/mediaQueries'
 
 type Props = {
   heading: string
@@ -11,12 +9,10 @@ type Props = {
 }
 
 export const TextArea = ({ heading, children }: Props) => {
-  const isMobile = useMedia(mediaQueries.mobile)
-
   return (
     <_Wrapper>
-      <Heading fontSize={isMobile ? '20px' : '24px'}>{heading}</Heading>
-      <Text fontSize={isMobile ? '12px' : '16px'}>{children}</Text>
+      <Heading>{heading}</Heading>
+      <Text>{children}</Text>
     </_Wrapper>
   )
 }

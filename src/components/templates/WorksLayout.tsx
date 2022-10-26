@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { ReactNode } from 'react'
-import { Heading } from '@/components/atoms/text/Heading'
+import { Title } from '@/components/atoms/text/Title'
 
 type Props = {
   children: ReactNode
@@ -9,7 +9,7 @@ type Props = {
 export const WorksLayout = ({ children }: Props) => {
   return (
     <_DisplayWrap>
-      <Heading fontSize="48px">Works</Heading>
+      <Title isBold>Works</Title>
       {children}
     </_DisplayWrap>
   )

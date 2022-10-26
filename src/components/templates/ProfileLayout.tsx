@@ -1,14 +1,14 @@
 import styled from '@emotion/styled'
 import Image from 'next/image'
-import { Heading } from '@/components/atoms/text/Heading'
 import { Text } from '@/components/atoms/text/Text'
+import { Title } from '@/components/atoms/text/Title'
 
 import profileIcon from 'public/profile.png'
 
 export const ProfileLayout = () => {
   return (
     <_DisplayWrap>
-      <Heading fontSize="48px">Profile</Heading>
+      <Title isBold>Profile</Title>
       <_Block>
         <_Figure>
           <Image src={profileIcon} alt="プロフィール" layout="fill" />
