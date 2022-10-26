@@ -19,9 +19,7 @@ export const ProfileLayout = () => {
           <Text>
             名古屋市立大学芸術工学部情報環境デザイン学科3年生。
             <br />
-            業務支援サービスの開発・提供を行うIT企業で
-            <br />
-            Webエンジニアとして長期インターンシップをしています。
+            業務支援サービスの開発・提供を行うIT企業でWebエンジニアとして長期インターンシップをしています。
             <br />
             エンジニアリングとデザインが好きです。
             <br />
@@ -39,11 +37,24 @@ const _DisplayWrap = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: calc(4.5rem + 60px);
+
+  @media screen and (max-width: 519px) {
+    margin-top: calc(4.5rem + 40px);
+  }
 `
 
 const _Block = styled.section`
   display: flex;
   margin-top: 60px;
+
+  @media screen and (max-width: 959px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 519px) {
+    margin-top: 40px;
+  }
 `
 
 const _Figure = styled.figure`
@@ -54,6 +65,11 @@ const _Figure = styled.figure`
   border-radius: 120px;
   box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 10%),
     0px 10px 10px -5px rgba(0, 0, 0, 4%);
+
+  @media screen and (max-width: 519px) {
+    width: 200px;
+    height: 200px;
+  }
 `
 
 const _AboutWrap = styled.div`
@@ -61,11 +77,25 @@ const _AboutWrap = styled.div`
   * + * {
     margin-top: 8px;
   }
+
+  @media screen and (max-width: 959px) {
+    max-width: 420px;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 519px) {
+    max-width: 315px;
+    margin-top: 20px;
+  }
 `
 
 const _Romaji = styled.span`
   color: ${({ theme }) => theme.colors.gray};
   font-size: 16px;
+
+  @media screen and (max-width: 519px) {
+    font-size: 8px;
+  }
 `
 
 const _Name = styled.h3`
@@ -74,4 +104,8 @@ const _Name = styled.h3`
   font-size: 24px;
   font-weight: ${({ theme }) => theme.fontWt.Medium};
   letter-spacing: 0.1rem;
+
+  @media screen and (max-width: 519px) {
+    font-size: 16px;
+  }
 `
