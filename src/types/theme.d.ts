@@ -14,6 +14,7 @@ interface Colors {
   white: string
   subWhite: string
   purple: string
+  purpleGradient: string
 }
 
 interface Fonts {

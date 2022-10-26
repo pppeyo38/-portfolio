@@ -14,7 +14,10 @@ export const TopLayout = () => {
 
   const height = use100vh()
   return (
-    <_DisplayWrap height={height ? `${height}px` : '100vh'}>
+    <_DisplayWrap
+      height={height ? `${height}px` : '100vh'}
+      isBgColor={isTablet || isMobile}
+    >
       {isPc && <TopPc />}
       {isTablet && <TopTablet />}
       {isMobile && <TopMobile />}
@@ -22,8 +25,10 @@ export const TopLayout = () => {
   )
 }
 
-const _DisplayWrap = styled.div<{ height: string }>`
+const _DisplayWrap = styled.div<{ height: string; isBgColor: boolean }>`
   display: flex;
   width: 100vw;
   height: ${(props) => `calc(${props.height}) `};
+  background: ${(props) =>
+    props.isBgColor && props.theme.colors.purpleGradient};
 `

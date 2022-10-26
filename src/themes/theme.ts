@@ -5,6 +5,7 @@ export const theme = {
     white: '#FFFFFF',
     subWhite: '#F1EFFC',
     purple: '#7966FE',
+    purpleGradient: 'linear-gradient(135deg, #AB79E8 0%, #555EE7 100%)',
   },
   fonts: {
     ZKGothic: `'Zen Kaku Gothic New', 'sans-serif'`,

@@ -4,13 +4,16 @@ import { Title } from '@/components/atoms/text/Title'
 export const TopMobile = () => {
   return (
     <_DisplayWrap>
-      <Title fontSize="64px">Welcome, Peyo’s Portfolio!</Title>
+      <Title color="#FFF" fontSize="64px">
+        Welcome, Peyo’s Portfolio!
+      </Title>
     </_DisplayWrap>
   )
 }
 
 const _DisplayWrap = styled.section`
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   padding-left: 5%;
