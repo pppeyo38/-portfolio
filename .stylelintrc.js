@@ -20,5 +20,6 @@ module.exports = {
     'declaration-empty-line-before': [null],
     'length-zero-no-unit': [null],
     'selector-pseudo-element-colon-notation': [null],
+    'annotation-no-unknown': [null],
   },
 }

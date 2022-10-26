@@ -37,6 +37,7 @@ export const NavList = ({ pathname }: Props) => {
 
 const _NavList = styled.ul`
   display: flex;
+  align-items: center;
   margin: 0 18px;
   gap: 24px;
 
@@ -66,6 +67,7 @@ const _NavListItem = styled.li<{ isActive: boolean }>`
 `
 
 const _Item = styled.a`
+  margin: 0 4px;
   color: ${({ theme }) => theme.colors.black};
   cursor: pointer;
   font-family: ${({ theme }) => theme.fonts.Inter};

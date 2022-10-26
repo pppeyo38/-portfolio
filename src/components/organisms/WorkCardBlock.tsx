@@ -3,7 +3,6 @@ import { WorkCard } from '@/components/molecules/WorkCard'
 import { WorksListProps } from '@/types/workTypes'
 
 export const WorkCardBlock = ({ worksList }: WorksListProps) => {
-  console.log(worksList)
   return (
     <_Wrapper>
       {worksList.map((item, index) => (
