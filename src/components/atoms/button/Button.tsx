@@ -31,4 +31,10 @@ const _Button = styled.button<{ strokeColor: string; fillColor: string }>`
   color: ${(props) => props.strokeColor};
   cursor: pointer;
   font-size: 18px;
+
+  @media screen and (max-width: 519px) {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
 `

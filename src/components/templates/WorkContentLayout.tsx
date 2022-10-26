@@ -109,7 +109,7 @@ const _MockFigure = styled.figure`
     width: 180px;
     height: 364.7px;
   }
-  @media screen and (max-width: 959px) {
+  @media screen and (max-width: 519px) {
     width: 115.68px;
     height: 234.38px;
   }
@@ -156,5 +156,11 @@ const _GoLiveBtn = styled.div`
 
   &:hover {
     transform: translateY(-10px);
+  }
+
+  @media screen and (max-width: 1519px) {
+    right: 20px;
+    bottom: 20px;
+    font-size: 12px;
   }
 `
