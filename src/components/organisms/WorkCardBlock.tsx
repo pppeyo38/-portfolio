@@ -30,5 +30,6 @@ const _Wrapper = styled.section`
   @media screen and (max-width: 650px) {
     max-width: 300px;
     justify-content: center;
+    margin: 40px auto;
   }
 `

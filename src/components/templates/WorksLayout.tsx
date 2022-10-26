@@ -21,4 +21,8 @@ const _DisplayWrap = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: calc(4.5rem + 60px);
+
+  @media screen and (max-width: 519px) {
+    margin-top: calc(4.5rem + 40px);
+  }
 `
