@@ -1,12 +1,13 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-
 import GithubIcon from 'public/icons/github.svg'
 import TwitterIcon from 'public/icons/twitter.svg'
 
-export const NavList = () => {
-  const router = useRouter()
+type Props = {
+  pathname: string
+}
+
+export const NavList = ({ pathname }: Props) => {
   const navList = [
     { nav: 'Top', path: '/' },
     { nav: 'Works', path: '/works' },
@@ -16,18 +17,20 @@ export const NavList = () => {
   return (
     <_NavList>
       {navList.map((item, index) => (
-        <_NavListItem isActive={router.pathname === item.path} key={index}>
+        <_NavListItem isActive={pathname === item.path} key={index}>
           <Link href={`${item.path}`}>
             <_Item>{item.nav}</_Item>
           </Link>
         </_NavListItem>
       ))}
-      <_A href="https://github.com/pppeyo38">
-        <GithubIcon width={24} height={24} />
-      </_A>
-      <_A href="https://twitter.com/ume2_uguisu">
-        <TwitterIcon width={24} height={24} />
-      </_A>
+      <_SnsIconWrap>
+        <_A href="https://github.com/pppeyo38">
+          <GithubIcon width={24} height={24} />
+        </_A>
+        <_A href="https://twitter.com/ume2_uguisu">
+          <TwitterIcon width={24} height={24} />
+        </_A>
+      </_SnsIconWrap>
     </_NavList>
   )
 }
@@ -37,6 +40,10 @@ const _NavList = styled.ul`
   align-items: center;
   margin: 0 18px;
   gap: 24px;
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+  }
 `
 
 const _NavListItem = styled.li<{ isActive: boolean }>`
@@ -67,6 +74,11 @@ const _Item = styled.a`
   font-family: ${({ theme }) => theme.fonts.Inter};
   font-size: 16px;
   font-weight: ${({ theme }) => theme.fontWt.Medium};
+`
+
+const _SnsIconWrap = styled.div`
+  display: flex;
+  gap: 16px;
 `
 
 const _A = styled.a`
