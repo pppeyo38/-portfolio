@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { WorkSplitLayout } from '@/components/templates/WorkSplitLayout'
+import { WorkContentLayout } from '@/components/templates/WorkContentLayout'
 import aRestData from '@/data/works/aRest.json'
 
 const aRest: NextPage = () => {
@@ -11,7 +11,7 @@ const aRest: NextPage = () => {
         <title>A Rest | Works | PEYO LOG</title>
       </Head>
 
-      <WorkSplitLayout {...aRestData} />
+      <WorkContentLayout {...aRestData} />
     </>
   )
 }
