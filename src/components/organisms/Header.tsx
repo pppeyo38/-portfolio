@@ -54,7 +54,7 @@ const _Header = styled.header<{ isOpen: boolean }>`
 
 const _Inner = styled.div`
   display: flex;
-  max-width: 1050px;
+  max-width: 1200px;
   height: 100%;
   align-items: center;
   justify-content: space-between;

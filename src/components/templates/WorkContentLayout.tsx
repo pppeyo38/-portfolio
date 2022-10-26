@@ -15,17 +15,19 @@ export const WorkContentLayout = (props: WorkPageProps) => {
   return (
     <_DisplayWrap height={height ? `${height}px` : '100vh'}>
       <_SectionLeft bgColor={bgColor}>
-        <_SectionLeftHead>
-          <Title color="#FFF">{title}</Title>
-          <Text color="#FFF">{abstract}</Text>
-        </_SectionLeftHead>
-        <_MockUpBlock>
-          {image.map((item, index) => (
-            <_MockFigure key={index}>
-              <Image src={item.path} alt={item.alt} layout="fill" />
-            </_MockFigure>
-          ))}
-        </_MockUpBlock>
+        <_SectionLeftInner>
+          <_SectionLeftHead>
+            <Title color="#FFF">{title}</Title>
+            <Text color="#FFF">{abstract}</Text>
+          </_SectionLeftHead>
+          <_MockUpBlock>
+            {image.map((item, index) => (
+              <_MockFigure key={index}>
+                <Image src={item.path} alt={item.alt} layout="fill" />
+              </_MockFigure>
+            ))}
+          </_MockUpBlock>
+        </_SectionLeftInner>
       </_SectionLeft>
       <_SectionRight>
         <TextArea heading="Period">{content.period}</TextArea>
@@ -66,21 +68,35 @@ const _DisplayWrap = styled.div<{ height: string }>`
 `
 
 const _SectionLeft = styled.section<{ bgColor: string }>`
-  width: calc(50% - 8%);
-  padding: 4%;
+  display: grid;
+  width: 50%;
   margin-top: 4.5rem;
   background: ${(props) => props.bgColor};
   overflow-y: hidden;
+  place-content: center;
 
   @media screen and (max-width: 959px) {
-    width: calc(100% - 8%);
+    width: 100%;
     height: 50%;
   }
 `
 
+const _SectionLeftInner = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 959px) {
+    flex-direction: row;
+    align-items: center;
+  }
+  @media screen and (max-width: 519px) {
+    width: 330px;
+    flex-direction: column;
+  }
+`
+
 const _SectionLeftHead = styled.div`
-  * + * {
-    margin-top: 4px;
+  @media screen and (max-width: 959px) {
+    width: 320px;
   }
 `
 
@@ -88,23 +104,25 @@ const _MockUpBlock = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 32px;
-  @media screen and (max-width: 1200px) {
-    margin-top: 10px;
+  gap: 32px;
+
+  @media screen and (max-width: 959px) {
+    justify-content: center;
+    gap: 32px;
   }
 `
 
 const _MockFigure = styled.figure`
   position: relative;
-  width: 230px;
-  height: 466px;
+  width: 24vh;
+  aspect-ratio: 1 / 2.026;
 
-  @media screen and (max-width: 1200px) {
-    width: 180px;
-    height: 364.7px;
+  @media screen and (min-width: 1200px) {
+    width: 32vh;
   }
-  @media screen and (max-width: 519px) {
-    width: 115.68px;
-    height: 234.38px;
+
+  @media screen and (max-width: 959px) {
+    width: 14vh;
   }
 `
 
