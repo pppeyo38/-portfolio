@@ -1,13 +1,22 @@
 import styled from '@emotion/styled'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 import { HeaderLogo } from '@/components/molecules/HeaderLogo'
 import { NavList } from '@/components/molecules/NavList'
 
 export const Header = () => {
+  const router = useRouter()
+  const [isOpen, setOpen] = useState(false)
+
+  useEffect(() => {
+    setOpen(false)
+  }, [router.pathname])
+
   return (
     <_Header>
       <_Inner>
         <HeaderLogo />
-        <NavList />
+        <NavList pathname={router.pathname} />
       </_Inner>
     </_Header>
   )
