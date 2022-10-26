@@ -2,16 +2,12 @@ import styled from '@emotion/styled'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import useMedia from 'use-media'
+
 import { HamburgerBtn } from '@/components/atoms/button/HamburgerBtn'
 import { HeaderLogo } from '@/components/molecules/HeaderLogo'
 import { Modal } from '@/components/molecules/Modal'
 import { NavList } from '@/components/molecules/NavList'
-
-const mediaQueries = {
-  mobile: '(max-width: 519px)',
-  tablet: '(min-width: 520px) and (max-width: 959px)',
-  pc: '(min-width: 960px)',
-}
+import { mediaQueries } from '@/themes/mediaQueries'
 
 export const Header = () => {
   const router = useRouter()
@@ -23,16 +19,23 @@ export const Header = () => {
   }, [router.pathname])
 
   return (
-    <_Header isOpen={isOpen}>
-      <_Inner>
-        <HeaderLogo />
-        {isPc ? (
+    <>
+      <_Header isOpen={isOpen}>
+        <_Inner>
+          <HeaderLogo />
+          {isPc ? (
+            <NavList pathname={router.pathname} />
+          ) : (
+            <HamburgerBtn isOpen={isOpen} setOpen={setOpen} />
+          )}
+        </_Inner>
+      </_Header>
+      {!isPc && (
+        <Modal isOpen={isOpen}>
           <NavList pathname={router.pathname} />
-        ) : (
-          <HamburgerBtn isOpen={isOpen} setOpen={setOpen} />
-        )}
-      </_Inner>
-    </_Header>
+        </Modal>
+      )}
+    </>
   )
 }
 
