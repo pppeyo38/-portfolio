@@ -16,7 +16,6 @@ export const TopTablet = () => {
 
 const _SectionRight = styled.section`
   display: flex;
-  overflow: hidden;
   width: 50%;
   align-items: center;
   justify-content: center;

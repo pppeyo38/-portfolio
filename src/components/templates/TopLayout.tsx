@@ -27,6 +27,7 @@ export const TopLayout = () => {
 
 const _DisplayWrap = styled.div<{ height: string; isBgColor: boolean }>`
   display: flex;
+  overflow: hidden;
   width: 100vw;
   height: ${(props) => `calc(${props.height}) `};
   background: ${(props) =>
