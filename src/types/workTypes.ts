@@ -27,5 +27,6 @@ export type WorkPageProps = {
   title: string
   abstract: string
   url?: string
+  recommendMobile?: boolean
   content: WorkContent
 }

@@ -9,7 +9,8 @@ import { TextArea } from '@/components/molecules/TextArea'
 import { WorkPageProps } from '@/types/workTypes'
 
 export const WorkContentLayout = (props: WorkPageProps) => {
-  const { image, bgColor, title, abstract, url, content } = props
+  const { image, bgColor, title, abstract, url, content, recommendMobile } =
+    props
   const height = use100vh()
 
   return (
@@ -31,6 +32,15 @@ export const WorkContentLayout = (props: WorkPageProps) => {
       </_SectionLeft>
       <_SectionRight>
         <TextArea heading="Period">{content.period}</TextArea>
+        <_LinkArea>
+          <Heading>Product Link</Heading>
+          <_Link href={url}>{url}</_Link>
+          {recommendMobile && (
+            <_Recommend>
+              ※モバイルファーストで開発しているため、スマホサイズでの動作確認をお願いします
+            </_Recommend>
+          )}
+        </_LinkArea>
         <TextArea heading="Concept">{content.concept}</TextArea>
         <TextArea heading="Technology">{content.technology}</TextArea>
         <_LinkArea>
@@ -151,12 +161,19 @@ const _LinkArea = styled.div`
 const _Link = styled.a`
   display: block;
   color: #4d79ff;
+  font-family: ${({ theme }) => theme.fonts.ZKGothic};
   font-size: 16px;
   line-height: 24px;
   text-decoration: underline;
   @media screen and (max-width: 959px) {
     font-size: 12px;
   }
+`
+
+const _Recommend = styled.span`
+  color: ${({ theme }) => theme.colors.black};
+  font-family: ${({ theme }) => theme.fonts.ZKGothic};
+  font-size: 12px;
 `
 
 const _GoLiveBtn = styled.div`
