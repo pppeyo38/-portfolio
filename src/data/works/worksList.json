@@ -1,20 +1,20 @@
 [
   {
-    "img": "/work/16memo.jpg",
+    "img": "/workThumnail/16memo.jpg",
     "title": "16memo",
     "route": "16memo",
     "product": "WEB APP",
     "role": "Backend & Frontend"
   },
   {
-    "img": "/work/geikosaiPre.jpg",
+    "img": "/workThumnail/geikosaiPre.jpg",
     "title": "芸工祭2022告知サイト",
     "route": "geikousai2022-pre",
     "product": "WEB SITE",
     "role": "Frontend"
   },
   {
-    "img": "/work/geikousaiGame.jpg",
+    "img": "/workThumnail/geikousaiGame.jpg",
     "title": "芸工祭2022 ゲームサイト",
     "route": "geikousai2022_game",
     "product": "WEB SITE",

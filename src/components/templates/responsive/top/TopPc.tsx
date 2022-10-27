@@ -28,6 +28,6 @@ const _SectionRight = styled.section`
 
 const _SectionLeft = styled.section`
   width: 55%;
-  background-image: url('/mock.png');
+  background-image: url('/top/mock.png');
   background-size: cover;
 `
