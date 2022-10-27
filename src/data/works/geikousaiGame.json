@@ -1,8 +1,7 @@
 {
   "image": {
     "path": "/mockUp/geikousai_game.png",
-    "alt": "芸工祭2022 ゲーム紹介ページ",
-    "aspect": "1/0.561"
+    "alt": "芸工祭2022 ゲーム紹介ページ"
   },
   "color": "#3DB8B3",
   "bgColor": "linear-gradient(329.11deg, #151515 0%, #585858 100%)",

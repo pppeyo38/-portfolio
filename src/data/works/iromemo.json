@@ -1,8 +1,7 @@
 {
   "image": {
     "path": "/mockUp/16memo_Login.png",
-    "alt": "16memo",
-    "aspect": ""
+    "alt": "16memo"
   },
   "color": "#3DB8B3",
   "bgColor": "linear-gradient(329.11deg, #00A8A6 0%, #79C8C0 100%)",

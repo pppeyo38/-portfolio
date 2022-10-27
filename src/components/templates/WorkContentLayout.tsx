@@ -21,7 +21,7 @@ export const WorkContentLayout = (props: WorkPageProps) => {
           <Text color="#FFF">{abstract}</Text>
         </_SectionLeftHead>
         <_MockUpBlock>
-          <_MockFigure aspect={image.aspect}>
+          <_MockFigure>
             <Image
               src={image.path}
               alt={image.alt}
@@ -136,7 +136,7 @@ const _MockUpBlock = styled.div`
   }
 `
 
-const _MockFigure = styled.figure<{ aspect: string }>`
+const _MockFigure = styled.figure`
   position: relative;
   width: 100%;
   height: 100%;
