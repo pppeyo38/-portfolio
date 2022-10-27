@@ -33,7 +33,7 @@ const _SectionLeft = styled.div`
   width: 50%;
   height: 100%;
   margin-top: 4.5rem;
-  background-image: url('/top/topMock_sp_tb.png');
+  background-image: url('/top/mock_sp.png');
   background-position-y: center;
   background-size: cover;
   transform: scale(1.2);
