@@ -1,5 +1,9 @@
 {
-  "image": [{ "path": "/work/geikosaiPre.jpg", "alt": "芸工祭2022告知サイト" }],
+  "image": {
+    "path": "/work/geikosaiPre.jpg",
+    "alt": "芸工祭2022告知サイト",
+    "aspect": ""
+  },
   "color": "#3DB8B3",
   "bgColor": "linear-gradient(119.29deg, #92C777 0%, #00A857 100%, #00A81C 100%)",
   "title": "芸工祭2022 告知サイト",

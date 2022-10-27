@@ -1,0 +1,18 @@
+{
+  "image": {
+    "path": "/mockUp/geikousai_game.png",
+    "alt": "芸工祭2022 ゲーム紹介ページ",
+    "aspect": "1/0.561"
+  },
+  "color": "#3DB8B3",
+  "bgColor": "linear-gradient(329.11deg, #151515 0%, #585858 100%)",
+  "title": "芸工祭ゲームサイト",
+  "abstract": "Web部署コンテンツ班制作ゲームを紹介",
+  "url": "https://geikousai-ncu.com/2022/game",
+  "content": {
+    "period": "Oct 09, 2022 - Oct 23, 2022",
+    "concept": "テキスト〜〜〜〜〜",
+    "technology": "Next.js, TypeScript, styled-components, react-intersection-observer",
+    "repository": ["github.com/pppeyo38/geikousai_content"]
+  }
+}

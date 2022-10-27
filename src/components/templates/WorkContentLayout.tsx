@@ -16,19 +16,20 @@ export const WorkContentLayout = (props: WorkPageProps) => {
   return (
     <_DisplayWrap height={height ? `${height}px` : '100vh'}>
       <_SectionLeft bgColor={bgColor}>
-        <_SectionLeftInner>
-          <_SectionLeftHead>
-            <Title color="#FFF">{title}</Title>
-            <Text color="#FFF">{abstract}</Text>
-          </_SectionLeftHead>
-          <_MockUpBlock>
-            {image.map((item, index) => (
-              <_MockFigure key={index}>
-                <Image src={item.path} alt={item.alt} layout="fill" />
-              </_MockFigure>
-            ))}
-          </_MockUpBlock>
-        </_SectionLeftInner>
+        <_SectionLeftHead>
+          <Title color="#FFF">{title}</Title>
+          <Text color="#FFF">{abstract}</Text>
+        </_SectionLeftHead>
+        <_MockUpBlock>
+          <_MockFigure aspect={image.aspect}>
+            <Image
+              src={image.path}
+              alt={image.alt}
+              layout="fill"
+              objectFit="contain"
+            />
+          </_MockFigure>
+        </_MockUpBlock>
       </_SectionLeft>
       <_SectionRight>
         <TextArea heading="Period">{content.period}</TextArea>
@@ -78,6 +79,7 @@ const _DisplayWrap = styled.div<{ height: string }>`
 `
 
 const _SectionLeft = styled.section<{ bgColor: string }>`
+  position: relative;
   display: grid;
   width: 50%;
   margin-top: 4.5rem;
@@ -91,49 +93,53 @@ const _SectionLeft = styled.section<{ bgColor: string }>`
   }
 `
 
-const _SectionLeftInner = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media screen and (max-width: 959px) {
-    flex-direction: row;
-    align-items: center;
-  }
-  @media screen and (max-width: 519px) {
-    width: 330px;
-    flex-direction: column;
-  }
-`
-
 const _SectionLeftHead = styled.div`
+  position: absolute;
+  top: 8%;
+  left: 8%;
+
   @media screen and (max-width: 959px) {
+    top: 50%;
+    left: 10%;
     width: 320px;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (max-width: 519px) {
+    top: 8%;
+    left: 4%;
+    transform: none;
   }
 `
 
 const _MockUpBlock = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-top: 32px;
-  gap: 32px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 42vw;
+  height: 42vw;
+  transform: translate(-50%, -50%);
 
   @media screen and (max-width: 959px) {
-    justify-content: center;
-    gap: 32px;
+    top: 50%;
+    right: 10%;
+    height: 100%;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (max-width: 519px) {
+    top: 60%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
   }
 `
 
-const _MockFigure = styled.figure`
+const _MockFigure = styled.figure<{ aspect: string }>`
   position: relative;
-  width: 24vh;
-  aspect-ratio: 1 / 2.026;
-
-  @media screen and (min-width: 1200px) {
-    width: 32vh;
-  }
-
-  @media screen and (max-width: 959px) {
-    width: 14vh;
-  }
+  width: 100%;
+  height: 100%;
 `
 
 const _SectionRight = styled.section`

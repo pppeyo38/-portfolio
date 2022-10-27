@@ -14,10 +14,10 @@
     "role": "Frontend"
   },
   {
-    "img": "/work/ARest.jpg",
-    "title": "A Rest",
-    "route": "arest",
-    "product": "WEB APP",
-    "role": "Frontend & Backend & Design"
+    "img": "/work/geikousaiGame.jpg",
+    "title": "芸工祭2022 ゲームサイト",
+    "route": "geikousai2022_game",
+    "product": "WEB SITE",
+    "role": "Frontend"
   }
 ]

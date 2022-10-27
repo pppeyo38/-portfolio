@@ -1,8 +1,9 @@
 {
-  "image": [
-    { "path": "/mockUp/16memo_Login.png", "alt": "16memo ログイン画面" },
-    { "path": "/mockUp/16memo.png", "alt": "16memo" }
-  ],
+  "image": {
+    "path": "/mockUp/16memo_Login.png",
+    "alt": "16memo",
+    "aspect": ""
+  },
   "color": "#3DB8B3",
   "bgColor": "linear-gradient(329.11deg, #00A8A6 0%, #79C8C0 100%)",
   "title": "16memo",

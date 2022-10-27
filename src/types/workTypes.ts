@@ -21,7 +21,8 @@ export type WorkPageProps = {
   image: {
     path: string
     alt: string
-  }[]
+    aspect: string
+  }
   color: string
   bgColor: string
   title: string
