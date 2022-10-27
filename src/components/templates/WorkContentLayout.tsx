@@ -161,6 +161,10 @@ const _SectionRight = styled.section`
 const _LinkArea = styled.div`
   h2 {
     margin-bottom: 16px;
+
+    @media screen and (max-width: 959px) {
+      margin-bottom: 8px;
+    }
   }
 `
 
