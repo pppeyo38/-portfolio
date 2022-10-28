@@ -21,7 +21,7 @@ export const WorkCard = (props: Props) => {
   return (
     <_Card onClick={onClickCard}>
       <_Figure>
-        <_Image src={`${img}`} alt={title} layout="fill" />
+        <_Image src={img} alt={title} layout="fill" />
       </_Figure>
       <_CradDetail>
         <_Product>{product}</_Product>
