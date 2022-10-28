@@ -12,7 +12,18 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          <meta name="description" content="ぺよのポートフォリオサイト" />
+          <meta charSet="utf-8" />
+          <meta property="og:url" content="https://peyolog.dev" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="PEYO LOG" />
+          <meta
+            property="og:description"
+            content="ぺよのポートフォリオサイト"
+          />
+          <meta property="og:site_name" content="PEYO LOG" />
+          <meta property="og:image" content="https://peyolog.dev/ogp.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@ume2_uguisu" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
