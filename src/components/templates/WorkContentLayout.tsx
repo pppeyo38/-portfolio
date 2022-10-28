@@ -23,7 +23,7 @@ export const WorkContentLayout = (props: WorkPageProps) => {
         <_MockUpBlock>
           <_MockFigure>
             <Image
-              src={`${image.path}.src`}
+              src={`${image.path}`}
               alt={image.alt}
               layout="fill"
               objectFit="contain"
