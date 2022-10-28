@@ -17,7 +17,12 @@ export const NavList = ({ pathname }: Props) => {
   return (
     <_NavList>
       {navList.map((item, index) => (
-        <_NavListItem key={index} isActive={item.path === pathname}>
+        <_NavListItem
+          key={index}
+          isActive={
+            item.path === pathname || pathname.includes(item.nav.toLowerCase())
+          }
+        >
           <Link href={`${item.path}`}>
             <_Item>{item.nav}</_Item>
           </Link>
@@ -43,6 +48,7 @@ const _NavList = styled.ul`
 
   @media screen and (max-width: 950px) {
     flex-direction: column;
+    gap: 36px;
   }
 `
 
@@ -54,7 +60,7 @@ const _NavListItem = styled.li<{ isActive: boolean }>`
       `
         content: '';
         position: absolute;
-        bottom: -8px;
+        bottom: -12px;
         left: 50%;
         transform: translateX(-50%);
         display: block;
@@ -73,6 +79,10 @@ const _Item = styled.a`
   font-family: ${({ theme }) => theme.fonts.Inter};
   font-size: 16px;
   font-weight: ${({ theme }) => theme.fontWt.Medium};
+
+  @media screen and (max-width: 950px) {
+    font-size: 18px;
+  }
 `
 
 const _SnsIconWrap = styled.li`
