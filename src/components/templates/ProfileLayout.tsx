@@ -91,6 +91,7 @@ const _AboutWrap = styled.div`
 
 const _Romaji = styled.span`
   color: ${({ theme }) => theme.colors.gray};
+  font-family: ${({ theme }) => theme.fonts.ZKGothic};
   font-size: 16px;
 
   @media screen and (max-width: 519px) {
