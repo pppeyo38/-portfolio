@@ -22,12 +22,7 @@ export const WorkContentLayout = (props: WorkPageProps) => {
         </_SectionLeftHead>
         <_MockUpBlock>
           <_MockFigure>
-            <Image
-              src="/mockup/geikousaiPre.png"
-              alt={image.alt}
-              layout="fill"
-              objectFit="contain"
-            />
+            <Image src={image.path} alt={image.alt} layout="fill" />
           </_MockFigure>
         </_MockUpBlock>
       </_SectionLeft>
@@ -140,6 +135,10 @@ const _MockFigure = styled.figure`
   position: relative;
   width: 100%;
   height: 100%;
+
+  img {
+    object-fit: contain;
+  }
 `
 
 const _SectionRight = styled.section`
