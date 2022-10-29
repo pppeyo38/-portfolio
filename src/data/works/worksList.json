@@ -7,6 +7,13 @@
     "role": "Backend & Frontend"
   },
   {
+    "img": "/ogp.jpg",
+    "title": "PEYO LOG",
+    "route": "peyolog",
+    "product": "WEB SITE",
+    "role": "Frontend & Design"
+  },
+  {
     "img": "/workThumnail/geikosaiPre.jpg",
     "title": "芸工祭2022告知サイト",
     "route": "geikousai2022-pre",

@@ -1,0 +1,17 @@
+{
+  "image": {
+    "path": "",
+    "alt": "PEYO LOG"
+  },
+  "color": "#7966FE",
+  "bgColor": "linear-gradient(135deg, #AB79E8 0%, #555EE7 100%)",
+  "title": "PEYO LOG",
+  "abstract": "ポートフォリオサイト",
+  "url": "https://peyolog.dev",
+  "content": {
+    "period": "Oct 24, 2022 - Now",
+    "concept": "大学等で制作したWebサイトやWebアプリをまとめた、ポートフォリオサイトです。",
+    "technology": "Next.js, TypeScript, emotion, Vercel, Figma",
+    "repository": ["github.com/pppeyo38/portfolio"]
+  }
+}
