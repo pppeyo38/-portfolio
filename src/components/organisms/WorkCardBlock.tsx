@@ -8,6 +8,13 @@ export const WorkCardBlock = ({ worksList }: WorksListProps) => {
       {worksList.map((item, index) => (
         <WorkCard key={index} {...item} />
       ))}
+      {worksList.length % 3 === 1 && (
+        <>
+          <_Div />
+          <_Div />
+        </>
+      )}
+      {worksList.length % 3 === 2 && <_Div />}
     </_Wrapper>
   )
 }
@@ -32,4 +39,9 @@ const _Wrapper = styled.section`
     justify-content: center;
     margin: 40px auto;
   }
+`
+
+const _Div = styled.div`
+  width: 300px;
+  height: 256px;
 `
