@@ -54,6 +54,7 @@ const _Figure = styled.figure`
 `
 
 const _Image = styled(Image)`
+  object-fit: cover;
   transition: 0.8s;
   ${_Card}:hover & {
     transform: scale(1.08);
