@@ -7,6 +7,13 @@
     "role": "Backend & Frontend"
   },
   {
+    "img": "/workThumnail/geikousaiGame.jpg",
+    "title": "芸工祭ゲームサイト",
+    "route": "geikousai2022_game",
+    "product": "WEB SITE",
+    "role": "Frontend"
+  },
+  {
     "img": "/workThumnail/peyolog.jpg",
     "title": "PEYO LOG",
     "route": "peyolog",
@@ -15,15 +22,8 @@
   },
   {
     "img": "/workThumnail/geikosaiPre.jpg",
-    "title": "芸工祭2022告知サイト",
+    "title": "芸工祭プレサイト",
     "route": "geikousai2022-pre",
-    "product": "WEB SITE",
-    "role": "Frontend"
-  },
-  {
-    "img": "/workThumnail/geikousaiGame.jpg",
-    "title": "芸工祭2022 ゲームサイト",
-    "route": "geikousai2022_game",
     "product": "WEB SITE",
     "role": "Frontend"
   }
