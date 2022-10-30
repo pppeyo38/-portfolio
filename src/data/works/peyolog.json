@@ -7,7 +7,7 @@
   "bgColor": "linear-gradient(135deg, #AB79E8 0%, #555EE7 100%)",
   "title": "PEYO LOG",
   "abstract": "ポートフォリオサイト",
-  "url": "https://peyolog.dev",
+  "url": "peyolog.dev",
   "content": {
     "period": "Oct 24, 2022 - Now",
     "concept": "大学等で制作したWebサイトやWebアプリをまとめた、ポートフォリオサイトです。作品の外観と制作過程の詳細を合わせて見られるように、作品紹介ページではスプリットスクリーンレイアウトを用いました。私の好きな色である紫を中心に、シンプルで見やすいデザインを心がけて作りました。今後も随時作品を公開していく予定です。",

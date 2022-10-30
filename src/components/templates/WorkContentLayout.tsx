@@ -30,7 +30,13 @@ export const WorkContentLayout = (props: WorkPageProps) => {
         <TextArea heading="Period">{content.period}</TextArea>
         <_LinkArea>
           <Heading>Product Link</Heading>
-          <_Link href={url}>{url}</_Link>
+          <_Link
+            href={`https://${url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {url}
+          </_Link>
           {recommendMobile && (
             <_Recommend>
               ※モバイルファーストで開発しているため、スマホサイズでの動作確認をお願いします
@@ -92,6 +98,10 @@ const _SectionLeftHead = styled.div`
   position: absolute;
   top: 8%;
   left: 8%;
+
+  * + * {
+    margin-top: 4px;
+  }
 
   @media screen and (max-width: 959px) {
     top: 50%;
