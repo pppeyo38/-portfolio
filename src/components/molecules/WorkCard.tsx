@@ -27,7 +27,7 @@ export const WorkCard = (props: Props) => {
         <_Product>{product}</_Product>
         <_Rabel>
           <_Title>{title}</_Title>
-          <_Roll>/ {role}</_Roll>
+          <_Roll>{role}</_Roll>
         </_Rabel>
       </_CradDetail>
     </_Card>

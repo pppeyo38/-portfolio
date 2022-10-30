@@ -21,7 +21,10 @@ export default class MyDocument extends Document {
             content="ぺよのポートフォリオサイト"
           />
           <meta property="og:site_name" content="PEYO LOG" />
-          <meta property="og:image" content="https://peyolog.dev/ogp.jpg" />
+          <meta
+            property="og:image"
+            content="https://peyolog.dev/ogpImage.jpg"
+          />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@ume2_uguisu" />
           <link rel="icon" href="/favicon.ico" />
