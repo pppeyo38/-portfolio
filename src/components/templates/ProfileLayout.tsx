@@ -73,6 +73,7 @@ const _Figure = styled.figure`
 `
 
 const _AboutWrap = styled.div`
+  max-width: 460px;
   padding: 10px 0;
   * + * {
     margin-top: 8px;
