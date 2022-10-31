@@ -12,7 +12,7 @@
   "content": {
     "period": "May 18, 2022 - Aug 21, 2022",
     "concept": "近年自身の熱中・没頭するものを『推し』と称し、その対象を様々なかたちで応援する『推し活』という文化の中で、対象の推しを彷彿とさせるイメージカラーのようなものである『推し色』を服装など身に纏うものや日常的に使用する小物にさりげなく取り入れる楽しみ方が浸透しています。しかしその『推し色』とは、ファン個々人の感性に基づきそれぞれ異なる色のイメージを持っているものから、16進数のカラーコードが公式に定義されているものまで多種多様です。そこで私たちは「推し色がたくさんあって管理が大変」という悩みに着目し、推し活の促進を図り日々の生活をより豊かにするサービスを目指しました。",
-    "technology": "React, TypeScript, Ruby on Rails, Firebase Authentication, Heroku",
+    "technology": "React, TypeScript, Ruby on Rails, PostgreSQL, Firebase Authentication, Heroku",
     "repository": [
       "github.com/pppeyo38/16memo_frontend",
       "github.com/pppeyo38/16memo_backend"
