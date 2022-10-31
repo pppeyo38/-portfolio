@@ -1,17 +1,10 @@
 module.exports = {
-  env: {
-    es2021: true,
-  },
   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'next/core-web-vitals',
-    'google',
-    'prettier',
-    'plugin:storybook/recommended',
+    'plugin:import/recommended',
+    'plugin:import/warnings',
   ],
   rules: {
-    'require-jsdoc': ['off'],
     'import/order': [
       'error',
       {
@@ -20,8 +13,5 @@ module.exports = {
         },
       },
     ],
-    '@next/next/no-img-element': ['off'],
-    'no-unused-vars': ['off'],
-    'react/display-name': ['off'],
   },
 }
