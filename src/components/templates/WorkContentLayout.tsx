@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import Image from 'next/image'
 import { use100vh } from 'react-div-100vh'
-import { Button } from '@/components/atoms/button/Button'
 import { Heading } from '@/components/atoms/text/Heading'
 import { Text } from '@/components/atoms/text/Text'
 import { Title } from '@/components/atoms/text/Title'
@@ -54,17 +53,6 @@ export const WorkContentLayout = (props: WorkPageProps) => {
           ))}
         </_LinkArea>
       </_SectionRight>
-      {url && (
-        <_GoLiveBtn>
-          <Button
-            strokeColor="#FFF"
-            fillColor={bgColor}
-            onClick={() => location.assign(url)}
-          >
-            Go Live
-          </Button>
-        </_GoLiveBtn>
-      )}
     </_DisplayWrap>
   )
 }
@@ -193,21 +181,4 @@ const _Recommend = styled.span`
   color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.fonts.ZKGothic};
   font-size: 12px;
-`
-
-const _GoLiveBtn = styled.div`
-  position: fixed;
-  right: 40px;
-  bottom: 40px;
-  transition: 0.8s;
-
-  &:hover {
-    transform: translateY(-10px);
-  }
-
-  @media screen and (max-width: 1519px) {
-    right: 20px;
-    bottom: 20px;
-    font-size: 12px;
-  }
 `
